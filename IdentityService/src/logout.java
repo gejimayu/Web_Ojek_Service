@@ -63,17 +63,28 @@ public class logout extends HttpServlet {
 	        conn = DriverManager.getConnection(DB_URL, USER, PASS);
 	        out.println("success");
 	          
-	        // Execute SQL query
 	        stmt = (Statement) conn.createStatement();
 	        String sql;
+	        
+	        //Validate token
+	        sql = "SELECT * FROM accesstoken WHERE token = '" + usertoken + "'";
+	        ResultSet rs =stmt.executeQuery(sql);
+	        if (!rs.next()) { //token exists
+	        	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+	        	return;
+	        }
+	        
+	        // Execute Delete Query
 	        sql = "DELETE FROM accesstoken WHERE token = '" + usertoken + "'";
 	        stmt.executeUpdate(sql);
+	        response.setStatus(HttpServletResponse.SC_OK );
 	          
 	        stmt.close();
 	        conn.close();
 	    } 
 	    catch(SQLException se) {
 	    	//Handle errors for JDBC
+	    	response.setStatus(HttpServletResponse.SC_BAD_REQUEST );
 	    	se.printStackTrace();
 	    } 
 	    catch(Exception e) {
