@@ -28,9 +28,11 @@ public class logout extends HttpServlet {
 	static final String PASS = "";
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//Read body
 		StringBuffer jb = new StringBuffer();
 		String line = null;
+		String usertoken = null;
+		
+		//Read body
 		try {
 		  BufferedReader reader = request.getReader();
 		  while ((line = reader.readLine()) != null)
@@ -42,13 +44,13 @@ public class logout extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			JSONObject jsonObject = new JSONObject(jsonData); // put "String"
-			String key = jsonObject.getString("token");
-			out.println(key);
+			usertoken = jsonObject.getString("token");
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 		}
 		
+		//Connect to database
 	    Statement stmt = null;
 	    Connection conn = null;
 	      
@@ -64,15 +66,9 @@ public class logout extends HttpServlet {
 	        // Execute SQL query
 	        stmt = (Statement) conn.createStatement();
 	        String sql;
-	        sql = "SELECT * from accesstoken";
-	        ResultSet rs = stmt.executeQuery(sql);
+	        sql = "DELETE FROM accesstoken WHERE token = '" + usertoken + "'";
+	        stmt.executeUpdate(sql);
 	          
-	        while (rs.next()) {
-	        	String name = rs.getString("token");
-	        	out.println("Name : " + name);
-	        }
-	          
-	        rs.close();
 	        stmt.close();
 	        conn.close();
 	    } 
@@ -93,7 +89,7 @@ public class logout extends HttpServlet {
 	        } // nothing we can do
 	        try {
 	           if(conn!=null)
-	           conn.close();
+	        	   conn.close();
 	        } catch(SQLException se) {
 	             se.printStackTrace();
 	        } //end finally try
