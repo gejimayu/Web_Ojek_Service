@@ -26,11 +26,6 @@ public class logout extends HttpServlet {
 	//  Database credentials
 	static final String USER = "root";
 	static final String PASS = "";
-
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-	}
-
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StringBuffer jb = new StringBuffer();
@@ -51,7 +46,6 @@ public class logout extends HttpServlet {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }
