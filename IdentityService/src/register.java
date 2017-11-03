@@ -66,7 +66,7 @@ public class register extends HttpServlet {
 		//Connect to database
 	    Statement stmt = null;
 	    Connection conn = null;
-	    
+	    request.setAttribute("message", "sukses");
 	    try {
 	    	// Register JDBC driver
 	        Class.forName("com.mysql.jdbc.Driver");
@@ -78,9 +78,16 @@ public class register extends HttpServlet {
 	          
 	        stmt = (Statement) conn.createStatement();
 			ResultSet rs = stmt.executeQuery("select id_user from userdata where username='"+username+"' or email='"+email+"'");
-		    if((!rs.next()) && (fullname != "") && (username != "") && (email != "") && (password != "") && (password == confirmpassword) && (phonenumber != "")) {
+		    if(!rs.next()) {
 		    	out.println("welcome "+fullname);
-		    	stmt.executeQuery("INSERT INTO userdata (username, password, name, phonenumber, email, driverstatus) VALUES ('"+username+"', '"+password+"', '"+fullname+"', '"+phonenumber+"', '"+email+"', '"+driverstatus+"');");
+		    	stmt.executeQuery("INSERT INTO userdata (name, username, email, password, phone_number, driver_status) VALUES ('"+fullname+"','"+username+"', '"+email+"','"+password+"', '"+phonenumber+"', '"+driverstatus+"')");
+		    	out.println(fullname);
+		        out.println(username);
+		        out.println(email);
+		        out.println(password);
+		        out.println(confirmpassword);
+		        out.println(phonenumber);
+		        out.println(driverstatus);
 		    	UUID uuid = UUID.randomUUID();
 		        String usertoken = uuid.toString().replace("-", "");
 		        // Execute Insert Query
@@ -90,8 +97,9 @@ public class register extends HttpServlet {
 		        response.setStatus(HttpServletResponse.SC_OK );
 		    }
 		    else {
+		    	out.println("salah");
 		    	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-	        	response.addHeader("message", "not found");;
+	        	response.addHeader("message", "not valid");;
 	        	return;
 
 		    }

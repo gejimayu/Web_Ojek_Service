@@ -8,6 +8,26 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="assets/javascript/login.js"></script>
 <script>
+	function checkForm(this, event) {
+		// Fetching values from all input fields and storing them in variables.
+		var username = document.getElementById("username").innerHTML;
+	    var email = document.getElementById("email").innerHTML;
+	    var fullname = document.forms["myForm"]["fullname"].value;
+	    var password = document.forms["myForm"]["password"].value;
+	    var confirmpassword = document.forms["myForm"]["confirmpassword"].value;;
+	    var phonenumber = document.forms["myForm"]["phonenumber"].value;
+	
+		//Check All Values/Informations Filled by User are Valid Or Not.If All Fields Are invalid Then Generate alert.
+		if ((password == '') || (fullname == '') || (username == '') || (email == ''))
+			alert("Fill All Fields")
+		else if (password != confirmpassword)
+			alert("Password Doesn't Match")
+		else if (!(/^[0-9]{9,}$/.test(phonenumber)))
+			alert("Phone Number Is Not Valid")
+		else
+			return submitForm(this, event);
+	}
+	
 	function submitForm(thisObj, thisEvent) {
 		var fullname = $('#fullname').val();
 		var username = $('#username').val();
@@ -55,20 +75,20 @@
 </head>
 <body>
 	<center>
-		<form enctype='application/json'>
+		<form enctype='application/json' id="myForm">
 			<center style="font-size: 30px"><b>SIGNUP</b></center><br>
 			<table>
-				<tr><td>Your Name</td><td colspan="2"><input id="fullname" name="fullname" type="text" maxlength="20"/></td></tr>
-				<tr><td>Username</td><td><input id="username" name="username" type="text" type="text" maxlength="20"/></td></tr>
-				<tr><td>Email</td><td><input id="email" name="email" type="text" maxlength="20"/></td></tr>
-				<tr><td>Password</td><td colspan="2"><input id="password" name="password" type="password" maxlength="20"/></td></tr>
-				<tr><td>Confirm Password</td><td colspan="2"><input id="confirmpassword" name="confirmpassword" type="password" maxlength="20"/></td></tr>
-				<tr><td>Phone Number</td><td colspan="2"><input id="phonenumber" name="phonenumber" type="text" maxlength="12"/></td></tr>
+				<tr><td>Your Name</td><td colspan="2"><input name="fullname" type="text" maxlength="20"/></td></tr>
+				<tr><td>Username</td><td><input name="username" type="text" type="text" maxlength="20" onblur="validate('username', this.value)"/></td><td width="17px"><div id='username'></div></td></tr>
+				<tr><td>Email</td><td><input name="email" type="text" maxlength="20" onblur="validate('email', this.value)"/></td><td><div id='email'></div></td></tr>
+				<tr><td>Password</td><td colspan="2"><input name="password" type="password" maxlength="20"/></td></tr>
+				<tr><td>Confirm Password</td><td colspan="2"><input name="confirmpassword" type="password" maxlength="20"/></td></tr>
+				<tr><td>Phone Number</td><td colspan="2"><input name="phonenumber" type="text" maxlength="12"/></td></tr>
 				<input type="hidden" name="driverstatus" value="0" />
-				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" value="1" />Also sign me up as a driver!</td></tr>
+				<tr><td colspan="3"><input type="checkbox" name="driverstatus" value="1" />Also sign me up as a driver!</td></tr>
 				<tr><td colspan="3" height="10"></td></tr>			
-				<tr><td><a href=http://localhost:8080/WebApp/login>Already have an account?</a></td>
-				<td align="right" colspan="2"><input type='submit' value="REGISTER" onclick="return submitForm(this, event)"></td></tr>
+				<tr><td><a href=login.php>Already have an account?</a></td>
+				<td align="right" colspan="2"><input type='submit' value="REGISTER" onclick="checkForm(this, event)"></td></tr>
 			</table>
 		</form>
 	</center>
