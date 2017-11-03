@@ -12,6 +12,7 @@ import org.json.JSONObject;
 
 import java.sql.*;
 import com.mysql.jdbc.Statement;
+import java.util.UUID;
 
 /**
  * Servlet implementation class logout
@@ -76,33 +77,23 @@ public class register extends HttpServlet {
 	        out.println("success");
 	          
 	        stmt = (Statement) conn.createStatement();
-	        //String sql;
-	        /*
-	        //Validate token
-	        sql = "SELECT * FROM accesstoken WHERE token = '" + usertoken + "'";
-	        ResultSet rs =stmt.executeQuery(sql);
-	        if (!rs.next()) { //token exists
-	        	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-	        	return;
-	        }
-	        
-	        // Execute Delete Query
-	        sql = "DELETE FROM accesstoken WHERE token = '" + usertoken + "'";
-	        stmt.executeUpdate(sql);
-	        response.setStatus(HttpServletResponse.SC_OK );
-	        */
-			ResultSet rs = stmt.executeQuery("select * from ojekaccount where username='"+username+"' or email='"+email+"'");
-	        int count=0;
-	        while(rs.next()){
-	        	count++;
-	        }
-		    if((count == 0) && (fullname != "") && (username != "") && (email != "") && (password != "") && (password == confirmpassword) && (phonenumber != "")) {
+			ResultSet rs = stmt.executeQuery("select id_user from userdata where username='"+username+"' or email='"+email+"'");
+		    if((!rs.next()) && (fullname != "") && (username != "") && (email != "") && (password != "") && (password == confirmpassword) && (phonenumber != "")) {
 		    	out.println("welcome "+fullname);
-		    	stmt.executeQuery("INSERT INTO user (username, password, name, phonenumber, email, driverstatus) VALUES ('"+username+"', '"+password+"', '"+fullname+"', '"+phonenumber+"', '"+email+"', '"+driverstatus+"');");
+		    	stmt.executeQuery("INSERT INTO userdata (username, password, name, phonenumber, email, driverstatus) VALUES ('"+username+"', '"+password+"', '"+fullname+"', '"+phonenumber+"', '"+email+"', '"+driverstatus+"');");
+		    	UUID uuid = UUID.randomUUID();
+		        String usertoken = uuid.toString().replace("-", "");
+		        // Execute Insert Query
+		        rs =stmt.executeQuery("SELECT id_user FROM userdata WHERE username = '" + username + "'");
+		        String id = rs.getString("id_user");
+		        stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')");
+		        response.setStatus(HttpServletResponse.SC_OK );
 		    }
 		    else {
-		        response.sendRedirect("http://localhost:8080/WebApp/register");
-		        out.println("Input tidak valid");
+		    	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+	        	response.addHeader("message", "not found");;
+	        	return;
+
 		    }
 		    
 	        stmt.close();

@@ -28,12 +28,22 @@
 		    "driverstatus": driverstatus,
 		}
 		};
+		
+		var jsonDataObject = new Object();
+		jsonDataObject.fullname = fullname;
+		jsonDataObject.username = username;
+		jsonDataObject.email= email;
+		jsonDataObject.password = password;
+		jsonDataObject.confirmpassword= confirmpassword;
+		jsonDataObject.phonenumber= phonenumber;
+		jsonDataObject.driverstatus= driverstatus;
+		
+		dataSend = JSON.stringify(jsonDataObject);
+		
 		$.ajax({
 			type: "POST",
 			url: "http://localhost:8081/IdentityService/register",
-		    data: {
-		      jsonData: JSON.stringify(myData)
-		    },
+		    data: dataSend,
 		    dataType: "json",
 		    contentType: 'application/json'
 		  });
@@ -45,7 +55,7 @@
 </head>
 <body>
 	<center>
-		<form method="post">
+		<form enctype='application/json'>
 			<center style="font-size: 30px"><b>SIGNUP</b></center><br>
 			<table>
 				<tr><td>Your Name</td><td colspan="2"><input id="fullname" name="fullname" type="text" maxlength="20"/></td></tr>
