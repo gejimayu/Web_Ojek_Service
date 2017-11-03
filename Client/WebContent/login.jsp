@@ -15,7 +15,7 @@
     <title>Ngo-Jek</title>
     
     <!-- Custom CSS -->
-    <link href="assets/stylesheets/main.css" rel="stylesheet" type='text/css'/>
+    <link href="style/main.css" rel="stylesheet" type='text/css'/>
     <!-- Custom Fonts -->
     <link href="assets/fonts/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600" rel="stylesheet">
