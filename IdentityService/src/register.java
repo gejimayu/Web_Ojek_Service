@@ -80,7 +80,7 @@ public class register extends HttpServlet {
 			ResultSet rs = stmt.executeQuery("select id_user from userdata where username='"+username+"' or email='"+email+"'");
 		    if(!rs.next()) {
 		    	out.println("welcome "+fullname);
-		    	stmt.executeQuery("INSERT INTO userdata (name, username, email, password, phone_number, driver_status) VALUES ('"+fullname+"','"+username+"', '"+email+"','"+password+"', '"+phonenumber+"', '"+driverstatus+"')");
+		    	stmt.executeUpdate("INSERT INTO userdata (name, username, email, password, phone_number, driver_status) VALUES ('"+fullname+"','"+username+"', '"+email+"','"+password+"', '"+phonenumber+"', '"+driverstatus+"')");
 		    	out.println(fullname);
 		        out.println(username);
 		        out.println(email);
@@ -92,8 +92,11 @@ public class register extends HttpServlet {
 		        String usertoken = uuid.toString().replace("-", "");
 		        // Execute Insert Query
 		        rs =stmt.executeQuery("SELECT id_user FROM userdata WHERE username = '" + username + "'");
-		        String id = rs.getString("id_user");
-		        stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')");
+		        if (rs.next()) {
+		        	int id = rs.getInt("id_user");
+		        	out.println(id);
+		        	stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')");
+		        }
 		        response.setStatus(HttpServletResponse.SC_OK );
 		    }
 		    else {
