@@ -45,9 +45,8 @@ public class login extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		try {
 			JSONObject jsonObject = new JSONObject(jsonData); // put "String"
-			out.println(jsonObject);
-			username = jsonObject.getJSONObject("account").getString("username");
-			password = jsonObject.getJSONObject("account").getString("password");
+			username = jsonObject.getString("username");
+			password = jsonObject.getString("password");
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -56,7 +55,7 @@ public class login extends HttpServlet {
 		//Connect to database
 	    Statement stmt = null;
 	    Connection conn = null;
-	      
+	     request.setAttribute("message", "sukses");
 	    try {
 	    	// Register JDBC driver
 	        Class.forName("com.mysql.jdbc.Driver");
@@ -74,6 +73,7 @@ public class login extends HttpServlet {
 	        ResultSet rs =stmt.executeQuery(sql);
 	        if (!rs.next()) { //No 
 	        	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+	        	response.addHeader("message", "not found");;
 	        	return;
 	        }
 	        
@@ -86,7 +86,7 @@ public class login extends HttpServlet {
 	        sql = "INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')";
 	        stmt.executeUpdate(sql);
 	        response.setStatus(HttpServletResponse.SC_OK );
-	          
+	        response.sendRedirect("http://localhost:8080/Client/selectdestination.jsp");
 	        stmt.close();
 	        conn.close();
 	    } 

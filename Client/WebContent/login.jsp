@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Ngo-Jek - Ojek Online Clone Website">
-    <meta name="author" content="Taufan Mahaputra, Robby Syaifullah, M Rafli">
+    <meta name="author" content="Taufan Mahaputra, Erfandi Suryo Putra, Gianfranco F.H">
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	
 	 <!-- Properties Title -->
@@ -34,12 +34,15 @@ function submitForm(thisObj, thisEvent) {
 	      "password": password
 	    }
 	  };
+	  var jsonDataObject = new Object();
+	  jsonDataObject.username = name;
+	  jsonDataObject.password = password;
+	  
+	  dataSend = JSON.stringify(jsonDataObject);
 	  $.ajax({
 	    type: "POST",
 	    url: "http://localhost:8081/IdentityService/login",
-	    data: {
-	      jsonData: JSON.stringify(myData)
-	    },
+	    data: dataSend,
 	    dataType: "json",
 	    contentType: 'application/json'
 	  });
