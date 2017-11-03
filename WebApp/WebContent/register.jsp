@@ -8,24 +8,32 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="assets/javascript/login.js"></script>
 <script>
-	function checkForm(this, event) {
+	function checkForm() {
 		// Fetching values from all input fields and storing them in variables.
 		var username = document.getElementById("username").innerHTML;
 	    var email = document.getElementById("email").innerHTML;
 	    var fullname = document.forms["myForm"]["fullname"].value;
 	    var password = document.forms["myForm"]["password"].value;
-	    var confirmpassword = document.forms["myForm"]["confirmpassword"].value;;
+	    var confirmpassword = document.forms["myForm"]["confirmpassword"].value;
 	    var phonenumber = document.forms["myForm"]["phonenumber"].value;
 	
 		//Check All Values/Informations Filled by User are Valid Or Not.If All Fields Are invalid Then Generate alert.
-		if ((password == '') || (fullname == '') || (username == '') || (email == ''))
-			alert("Fill All Fields")
-		else if (password != confirmpassword)
-			alert("Password Doesn't Match")
-		else if (!(/^[0-9]{9,}$/.test(phonenumber)))
-			alert("Phone Number Is Not Valid")
-		else
-			return submitForm(this, event);
+		if ((password == '') || (fullname == '') || (username == '') || (email == '')){
+			alert("Fill All Fields");
+			return false;
+		}
+		else if (password != confirmpassword){
+			alert("Password Doesn't Match");
+			return false;
+		}
+		else if (!(/^[0-9]{9,}$/.test(phonenumber))){
+			alert("Phone Number Is Not Valid");
+			return false;
+		}
+		else{
+			submitForm(this, event);
+			return true;
+		}
 	}
 	
 	function submitForm(thisObj, thisEvent) {
@@ -75,7 +83,7 @@
 </head>
 <body>
 	<center>
-		<form enctype='application/json' id="myForm">
+		<form enctype='application/json' id="myForm" onsubmit="return checkForm()">
 			<center style="font-size: 30px"><b>SIGNUP</b></center><br>
 			<table>
 				<tr><td>Your Name</td><td colspan="2"><input name="fullname" type="text" maxlength="20"/></td></tr>
@@ -88,7 +96,7 @@
 				<tr><td colspan="3"><input type="checkbox" name="driverstatus" value="1" />Also sign me up as a driver!</td></tr>
 				<tr><td colspan="3" height="10"></td></tr>			
 				<tr><td><a href=login.php>Already have an account?</a></td>
-				<td align="right" colspan="2"><input type='submit' value="REGISTER" onclick="checkForm(this, event)"></td></tr>
+				<td align="right" colspan="2"><input type='submit' value="REGISTER"></td></tr>
 			</table>
 		</form>
 	</center>
