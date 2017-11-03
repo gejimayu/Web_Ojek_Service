@@ -35,7 +35,6 @@ public class register extends HttpServlet {
 		String username = null;
 		String email = null;
 		String password = null;
-		String confirmpassword = null;
 		String phonenumber = null;
 		String driverstatus = null;
 		
@@ -55,7 +54,6 @@ public class register extends HttpServlet {
 			username = jsonObject.getString("username");
 			email = jsonObject.getString("email");
 			password = jsonObject.getString("password");
-			confirmpassword = jsonObject.getString("confirmpassword");
 			phonenumber = jsonObject.getString("phonenumber");
 			driverstatus = jsonObject.getString("driverstatus");			
 		}
@@ -81,13 +79,6 @@ public class register extends HttpServlet {
 		    if(!rs.next()) {
 		    	out.println("welcome "+fullname);
 		    	stmt.executeUpdate("INSERT INTO userdata (name, username, email, password, phone_number, driver_status) VALUES ('"+fullname+"','"+username+"', '"+email+"','"+password+"', '"+phonenumber+"', '"+driverstatus+"')");
-		    	out.println(fullname);
-		        out.println(username);
-		        out.println(email);
-		        out.println(password);
-		        out.println(confirmpassword);
-		        out.println(phonenumber);
-		        out.println(driverstatus);
 		    	UUID uuid = UUID.randomUUID();
 		        String usertoken = uuid.toString().replace("-", "");
 		        // Execute Insert Query
@@ -100,7 +91,7 @@ public class register extends HttpServlet {
 		        response.setStatus(HttpServletResponse.SC_OK );
 		    }
 		    else {
-		    	out.println("salah");
+		    	out.println("Username or Email unavailable");
 		    	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 	        	response.addHeader("message", "not valid");;
 	        	return;

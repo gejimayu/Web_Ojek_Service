@@ -6,8 +6,55 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Register</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="assets/javascript/login.js"></script>
 <script>
+	function submitForm() {
+		event.preventDefault();
+		var fullname = $('#fullname').val();
+		var username = $('#username').val();
+		var email = $('#email').val();
+		var password = $('#password').val();
+		var confirmpassword = $('#confirmpassword').val();
+		var phonenumber = $('#phonenumber').val();
+		var driverstatus = $('#driverstatus').val();
+		console.log(fullname, username, email, password, confirmpassword, phonenumber, driverstatus);
+		var myData = {
+			"ojekaccount": {
+		    "fullname": fullname,
+		    "username": username,
+		    "email": email,
+		    "password": password,
+		    "confirmpassword": confirmpassword,
+		    "phonenumber": phonenumber,
+		    "driverstatus": driverstatus,
+		}
+		};
+		
+		var jsonDataObject = new Object();
+		jsonDataObject.fullname = fullname;
+		jsonDataObject.username = username;
+		jsonDataObject.email= email;
+		jsonDataObject.password = password;
+		jsonDataObject.confirmpassword= confirmpassword;
+		jsonDataObject.phonenumber= phonenumber;
+		jsonDataObject.driverstatus= driverstatus;
+	
+		dataSend = JSON.stringify(jsonDataObject);
+		console.log(dataSend);
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:8081/IdentityService/register",
+		    data: dataSend,
+		    dataType: "json",
+		    contentType: 'application/json',
+	    	complete: function(){
+		    	console.log('successful');
+		    	window.location.href = "http://localhost:8080/Client/selectdestination.jsp";
+	    	}
+		  });
+		  console.log(JSON.stringify(myData));
+		  return false;
+	}
+
 	function checkForm() {
 		// Fetching values from all input fields and storing them in variables.
 		var username = document.forms["myForm"]["username"].value;
@@ -31,53 +78,11 @@
 			return false;
 		}
 		else{
-			submitForm(this, event);
+			submitForm();
 			return true;
 		}
 	}
 	
-	function submitForm(thisObj, thisEvent) {
-		var fullname = $('#fullname').val();
-		var username = $('#username').val();
-		var email = $('#email').val();
-		var password = $('#password').val();
-		var confirmpassword = $('#confirmpassword').val();
-		var phonenumber = $('#phonenumber').val();
-		var driverstatus = $('#driverstatus').val();
-			console.log(fullname, username, email, password, confirmpassword, phonenumber, driverstatus);
-		var myData = {
-			"ojekaccount": {
-		    "fullname": fullname,
-		    "username": username,
-		    "email": email,
-		    "password": password,
-		    "confirmpassword": confirmpassword,
-		    "phonenumber": phonenumber,
-		    "driverstatus": driverstatus,
-		}
-		};
-		
-		var jsonDataObject = new Object();
-		jsonDataObject.fullname = fullname;
-		jsonDataObject.username = username;
-		jsonDataObject.email= email;
-		jsonDataObject.password = password;
-		jsonDataObject.confirmpassword= confirmpassword;
-		jsonDataObject.phonenumber= phonenumber;
-		jsonDataObject.driverstatus= driverstatus;
-		
-		dataSend = JSON.stringify(jsonDataObject);
-		
-		$.ajax({
-			type: "POST",
-			url: "http://localhost:8081/IdentityService/register",
-		    data: dataSend,
-		    dataType: "json",
-		    contentType: 'application/json'
-		  });
-		  console.log(JSON.stringify(myData));
-		  return false;
-	}
 </script>
 
 </head>
@@ -86,14 +91,14 @@
 		<form enctype='application/json' id="myForm" onsubmit="return checkForm()">
 			<center style="font-size: 30px"><b>SIGNUP</b></center><br>
 			<table>
-				<tr><td>Your Name</td><td colspan="2"><input name="fullname" type="text" maxlength="20"/></td></tr>
-				<tr><td>Username</td><td><input name="username" type="text" type="text" maxlength="20" /></td></tr>
-				<tr><td>Email</td><td><input name="email" type="text" maxlength="20" /></td></tr>
-				<tr><td>Password</td><td colspan="2"><input name="password" type="password" maxlength="20"/></td></tr>
-				<tr><td>Confirm Password</td><td colspan="2"><input name="confirmpassword" type="password" maxlength="20"/></td></tr>
-				<tr><td>Phone Number</td><td colspan="2"><input name="phonenumber" type="text" maxlength="12"/></td></tr>
-				<input type="hidden" name="driverstatus" value="0" />
-				<tr><td colspan="3"><input type="checkbox" name="driverstatus" value="1" />Also sign me up as a driver!</td></tr>
+				<tr><td>Your Name</td><td colspan="2"><input id="fullname" name="fullname" type="text" maxlength="20"/></td></tr>
+				<tr><td>Username</td><td><input id="username" name="username" type="text" type="text" maxlength="20" /></td></tr>
+				<tr><td>Email</td><td><input id="email" name="email" type="text" maxlength="20" /></td></tr>
+				<tr><td>Password</td><td colspan="2"><input id="password" name="password" type="password" maxlength="20"/></td></tr>
+				<tr><td>Confirm Password</td><td colspan="2"><input id="confirmpassword" name="confirmpassword" type="password" maxlength="20"/></td></tr>
+				<tr><td>Phone Number</td><td colspan="2"><input id="phonenumber" name="phonenumber" type="text" maxlength="12"/></td></tr>
+				<input type="hidden" id="driverstatus" name="driverstatus" value="false" />
+				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" value="true" />Also sign me up as a driver!</td></tr>
 				<tr><td colspan="3" height="10"></td></tr>			
 				<tr><td><a href=login.php>Already have an account?</a></td>
 				<td align="right" colspan="2"><input type='submit' value="REGISTER"></td></tr>
