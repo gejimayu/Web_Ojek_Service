@@ -10,8 +10,8 @@
 <script>
 	function checkForm() {
 		// Fetching values from all input fields and storing them in variables.
-		var username = document.getElementById("username").innerHTML;
-	    var email = document.getElementById("email").innerHTML;
+		var username = document.forms["myForm"]["username"].value;
+	    var email = document.forms["myForm"]["email"].value;
 	    var fullname = document.forms["myForm"]["fullname"].value;
 	    var password = document.forms["myForm"]["password"].value;
 	    var confirmpassword = document.forms["myForm"]["confirmpassword"].value;
@@ -87,8 +87,8 @@
 			<center style="font-size: 30px"><b>SIGNUP</b></center><br>
 			<table>
 				<tr><td>Your Name</td><td colspan="2"><input name="fullname" type="text" maxlength="20"/></td></tr>
-				<tr><td>Username</td><td><input name="username" type="text" type="text" maxlength="20" onblur="validate('username', this.value)"/></td><td width="17px"><div id='username'></div></td></tr>
-				<tr><td>Email</td><td><input name="email" type="text" maxlength="20" onblur="validate('email', this.value)"/></td><td><div id='email'></div></td></tr>
+				<tr><td>Username</td><td><input name="username" type="text" type="text" maxlength="20" /></td></tr>
+				<tr><td>Email</td><td><input name="email" type="text" maxlength="20" /></td></tr>
 				<tr><td>Password</td><td colspan="2"><input name="password" type="password" maxlength="20"/></td></tr>
 				<tr><td>Confirm Password</td><td colspan="2"><input name="confirmpassword" type="password" maxlength="20"/></td></tr>
 				<tr><td>Phone Number</td><td colspan="2"><input name="phonenumber" type="text" maxlength="12"/></td></tr>
