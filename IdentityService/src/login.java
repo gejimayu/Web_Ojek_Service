@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
+
+import javax.servlet.RequestDispatcher;
 import java.sql.*;
 import com.mysql.jdbc.Statement;
 import java.util.UUID; //for generating token
@@ -73,7 +75,7 @@ public class login extends HttpServlet {
 	        ResultSet rs =stmt.executeQuery(sql);
 	        if (!rs.next()) { //No 
 	        	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-	        	response.addHeader("message", "not found");;
+	        	response.addHeader("message", "not found");
 	        	return;
 	        }
 	        
@@ -86,7 +88,7 @@ public class login extends HttpServlet {
 	        sql = "INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')";
 	        stmt.executeUpdate(sql);
 	        response.setStatus(HttpServletResponse.SC_OK );
-	        response.sendRedirect("http://localhost:8080/Client/selectdestination.jsp");
+	        response.addHeader("message", "ok");
 	        stmt.close();
 	        conn.close();
 	    } 

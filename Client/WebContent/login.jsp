@@ -43,8 +43,11 @@ function submitForm(thisObj, thisEvent) {
 	    type: "POST",
 	    url: "http://localhost:8081/IdentityService/login",
 	    data: dataSend,
-	    dataType: "json",
-	    contentType: 'application/json'
+	    contentType: 'application/json',
+	    success: function(data, status, xhr){
+	    	console.log('successful logged in');
+	    	window.location.href = "http://localhost:8080/Client/selectdestination.jsp";
+        }
 	  });
 	  console.log(JSON.stringify(myData));
 	  return false;
