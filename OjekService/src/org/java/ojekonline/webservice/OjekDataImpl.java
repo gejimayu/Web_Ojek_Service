@@ -59,7 +59,7 @@ public class OjekDataImpl implements OjekData{
 
 	@Override
 	public Babi findDriver(int id_user, String pick, String dest) {
-	    ArrayList<String> smth = new ArrayList<String>();
+	    ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
 		try {
 			String query = 
 					"SELECT DISTINCT name, prof_pic, avgrating, "
@@ -68,7 +68,14 @@ public class OjekDataImpl implements OjekData{
 					"( '" + pick + "' = location OR '" +  dest + "' = location)";
 			execute(query, 1);
 			while (rs.next()) {
-				smth.add("asem");
+				System.out.println(rs.getString("name"));
+				Map<String, String> temp = new HashMap<String, String>();
+				temp.put("name", rs.getString("name"));
+				temp.put("prof_pic", rs.getString("prof_pic"));
+				temp.put("avgrating", Float.toString(rs.getFloat("avgrating")));
+				temp.put("id_driver", Integer.toString(rs.getInt("id_driver")));
+				temp.put("num_votes", Integer.toString(rs.getInt("num_votes")));
+				smth.add(temp);
 			}
 			stmt.close();
 	        conn.close();
