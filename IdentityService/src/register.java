@@ -76,30 +76,29 @@ public class register extends HttpServlet {
 	          
 	        stmt = (Statement) conn.createStatement();
 			ResultSet rs = stmt.executeQuery("select id_user from userdata where username='"+username+"' or email='"+email+"'");
-		    if(!rs.next()) {
-		    	out.println("welcome "+fullname);
-		    	stmt.executeUpdate("INSERT INTO userdata (name, username, email, password, phone_number, driver_status) VALUES ('"+fullname+"','"+username+"', '"+email+"','"+password+"', '"+phonenumber+"', '"+driverstatus+"')");
-		    	UUID uuid = UUID.randomUUID();
-		        String usertoken = uuid.toString().replace("-", "");
-		        // Execute Insert Query
-		        rs =stmt.executeQuery("SELECT id_user FROM userdata WHERE username = '" + username + "'");
-		        if (rs.next()) {
-		        	int id = rs.getInt("id_user");
-		        	out.println(id);
-		        	stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')");
-		        }
-		        response.setStatus(HttpServletResponse.SC_OK );
-		    }
-		    else {
+		    if(rs.next()) {
 		    	out.println("Username or Email unavailable");
 		    	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-	        	response.addHeader("message", "not valid");;
+	        	response.addHeader("message", "not valid");
 	        	return;
-
 		    }
-		    
+		    out.println("welcome "+fullname);
+	    	stmt.executeUpdate("INSERT INTO userdata (name, username, email, password, phone_number, driver_status) VALUES ('"+fullname+"','"+username+"', '"+email+"','"+password+"', '"+phonenumber+"', '"+driverstatus+"')");
+	    	UUID uuid = UUID.randomUUID();
+	        String usertoken = uuid.toString().replace("-", "");
+	        // Execute Insert Query
+	        rs =stmt.executeQuery("SELECT id_user FROM userdata WHERE username = '" + username + "'");
+	        if (rs.next()) {
+	        	int id = rs.getInt("id_user");
+	        	out.println(id);
+	        	stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')");
+	        }
+	        response.setStatus(HttpServletResponse.SC_OK );
+	        response.addHeader("message", "ok");
+	        //response.sendRedirect("http://localhost:8080/Client/selectdestination.jsp");
 	        stmt.close();
 	        conn.close();
+	        //return;
 	    } 
 	    catch(SQLException se) {
 	    	//Handle errors for JDBC

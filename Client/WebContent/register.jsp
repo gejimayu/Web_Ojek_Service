@@ -4,10 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="register.css">
 <title>Register</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
 	function submitForm() {
+		var driverstatus;
+		if( $("#driverstatus").is(':checked')){
+            driverstatus = "true";
+        }else{
+            driverstatus = "false";
+        }
 		event.preventDefault();
 		var fullname = $('#fullname').val();
 		var username = $('#username').val();
@@ -15,7 +22,7 @@
 		var password = $('#password').val();
 		var confirmpassword = $('#confirmpassword').val();
 		var phonenumber = $('#phonenumber').val();
-		var driverstatus = $('#driverstatus').val();
+		//var driverstatus = $('#driverstatus').val();
 		console.log(fullname, username, email, password, confirmpassword, phonenumber, driverstatus);
 		var myData = {
 			"ojekaccount": {
@@ -44,15 +51,19 @@
 			type: "POST",
 			url: "http://localhost:8081/IdentityService/register",
 		    data: dataSend,
-		    dataType: "json",
+		    //dataType: "json",
 		    contentType: 'application/json',
-	    	complete: function(){
-		    	console.log('successful');
+		    success: function(data, status, xhr){
+		    	console.log('register success');
 		    	window.location.href = "http://localhost:8080/Client/selectdestination.jsp";
-	    	}
+	        },
+			error: function(data, status, xhr){
+		    	console.log('username or email has already been taken');
+		    	alert("username or email has already been taken");
+			}
 		  });
-		  console.log(JSON.stringify(myData));
-		  return false;
+		console.log(JSON.stringify(myData));
+		return false;
 	}
 
 	function checkForm() {
@@ -71,6 +82,10 @@
 		}
 		else if (password != confirmpassword){
 			alert("Password Doesn't Match");
+			return false;
+		}
+		else if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))){
+			alert("Email Is Not Valid");
 			return false;
 		}
 		else if (!(/^[0-9]{9,}$/.test(phonenumber))){
@@ -97,8 +112,7 @@
 				<tr><td>Password</td><td colspan="2"><input id="password" name="password" type="password" maxlength="20"/></td></tr>
 				<tr><td>Confirm Password</td><td colspan="2"><input id="confirmpassword" name="confirmpassword" type="password" maxlength="20"/></td></tr>
 				<tr><td>Phone Number</td><td colspan="2"><input id="phonenumber" name="phonenumber" type="text" maxlength="12"/></td></tr>
-				<input type="hidden" id="driverstatus" name="driverstatus" value="false" />
-				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" value="true" />Also sign me up as a driver!</td></tr>
+				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" />Also sign me up as a driver!</td></tr>
 				<tr><td colspan="3" height="10"></td></tr>			
 				<tr><td><a href=login.php>Already have an account?</a></td>
 				<td align="right" colspan="2"><input type='submit' value="REGISTER"></td></tr>
