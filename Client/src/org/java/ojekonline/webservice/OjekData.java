@@ -22,6 +22,16 @@ public interface OjekData {
 
     /**
      * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getUsernameRequest", output = "http://webservice.ojekonline.java.org/OjekData/getUsernameResponse")
+    public String getUsername();
+
+    /**
+     * 
      * @param arg0
      * @return
      *     returns boolean
@@ -32,5 +42,15 @@ public interface OjekData {
     public boolean validateToken(
         @WebParam(name = "arg0", partName = "arg0")
         String arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getPhoneNumberRequest", output = "http://webservice.ojekonline.java.org/OjekData/getPhoneNumberResponse")
+    public String getPhoneNumber();
 
 }

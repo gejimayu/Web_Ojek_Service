@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="javax.xml.namespace.QName" %>
+<%@ page import="javax.xml.ws.Service" %>
+<%@ page import="java.net.URL" %>
+<%@ page import="org.java.ojekonline.webservice.OjekData" %>
+<%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,13 +31,18 @@
     <script src=""></script>
 </head>
 <body>
+	<%
+		OjekDataImplService service = new OjekDataImplService();
+		OjekData ps = service.getOjekDataImplPort();
+	%>
+
 
  	<div class="container">
     <!-- navbar -->
     <div class="navbar">
       <img src="assets/image/yesbos.png" class="logo">
       <div class="logout">
-        <p style="margin-bottom: 2px;">Hi, <strong>username</strong> !</p>
+        <p style="margin-bottom: 2px;">Hi, <strong><%= ps.getUsername() %></strong> !</p>
         <a href="index.php">Logout</a>
       </div>
     </div>
@@ -70,7 +80,7 @@
 
   </div>
 
-
+	
 
 
 </body>
