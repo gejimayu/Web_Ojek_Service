@@ -5,6 +5,7 @@
 <%@ page import="java.net.URL" %>
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Profile" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,6 +35,8 @@
 	<%
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
+		Profile profile = new Profile();
+		profile = ps.getProfileInfo(1);
 	%>
 
 
@@ -42,7 +45,7 @@
     <div class="navbar">
       <img src="assets/image/yesbos.png" class="logo">
       <div class="logout">
-        <p style="margin-bottom: 2px;">Hi, <strong><%= ps.getUsername() %></strong> !</p>
+        <p style="margin-bottom: 2px;">Hi, <strong><%= profile.getUsername() %></strong> !</p>
         <a href="index.php">Logout</a>
       </div>
     </div>
@@ -66,17 +69,17 @@
         </div>
         <div class="img-profile">
           <img src="#imageprofile">
-          <h3 style="margin-bottom: 5px;">@username></h3>
-          nama user<br>
-          status driver
+          <h3 style="margin-bottom: 5px;"> @<%= profile.getUsername() %> </h3>
+          <%= profile.getFullName() %><br>
+          <%= profile.getDriver() %>
           <br>
-          <i class="fa fa-envelope-o" aria-hidden="true">&nbsp; username</i><br>
-          <i class="fa fa-phone" aria-hidden="true">&nbsp; phone number</i>
+          <i class="fa fa-envelope-o" aria-hidden="true">&nbsp; <%= profile.getUsername() %></i><br>
+          <i class="fa fa-phone" aria-hidden="true">&nbsp; <%= profile.getPhoneNumber() %></i>
         </div>
     </div>
 
     <!-- preferred-location -->
-    <?php echo ListPreferredLocation($con, $username) ?>
+    
 
   </div>
 

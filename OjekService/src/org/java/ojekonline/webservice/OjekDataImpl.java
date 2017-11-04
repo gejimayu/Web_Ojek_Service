@@ -9,7 +9,7 @@ import java.util.Map;
 import com.mysql.jdbc.Statement;
 
 @WebService(endpointInterface="org.java.ojekonline.webservice.OjekData")
-public class OjekDataImpl implements OjekData{
+public class OjekDataImpl implements OjekData {
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	static final String DB_URL = "jdbc:mysql://localhost:3306/ojekonline";
@@ -56,7 +56,7 @@ public class OjekDataImpl implements OjekData{
 	      	e.printStackTrace();
 	    } 
 	}
-
+	
 	@Override
 	public Babi findDriver(int id_user, String pick, String dest) {
 	    ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
@@ -91,6 +91,30 @@ public class OjekDataImpl implements OjekData{
 		return kampret;
 	}
 	
+	
+	@Override
+	public Profile getProfileInfo(int id_user) {
+		Profile profile = new Profile();
+		
+		try {
+			String query = "SELECT * FROM user WHERE id_user = " + id_user;
+			execute(query, 1);
+			while(rs.next()) {
+				profile.setFullName(rs.getString("name"));
+				profile.setUsername(rs.getString("username"));
+				profile.setEmail(rs.getString("email"));
+				profile.setPhoneNumber(rs.getString("phone_number"));
+				profile.setDriver(rs.getString("driver_status"));
+				profile.setPicture(rs.getString("prof_pic"));
+			}
+			stmt.close();
+	        conn.close();
+		}
+		catch (SQLException e) {
+			//error
+		}
+		return profile;
+	}
 	
 
 }

@@ -26,16 +26,6 @@ public interface OjekData {
 
     /**
      * 
-     * @return
-     *     returns java.lang.String
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getUsernameRequest", output = "http://webservice.ojekonline.java.org/OjekData/getUsernameResponse")
-    public String getUsername();
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns boolean
@@ -65,5 +55,18 @@ public interface OjekData {
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
         String arg2);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns org.java.ojekonline.webservice.Profile
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getProfileInfoRequest", output = "http://webservice.ojekonline.java.org/OjekData/getProfileInfoResponse")
+    public Profile getProfileInfo(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
 
 }

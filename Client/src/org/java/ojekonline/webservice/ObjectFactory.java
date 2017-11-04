@@ -24,6 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _Profile_QNAME = new QName("http://webservice.ojekonline.java.org/", "Profile");
     private final static QName _Babi_QNAME = new QName("http://webservice.ojekonline.java.org/", "Babi");
 
     /**
@@ -42,6 +43,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Profile }
+     * 
+     */
+    public Profile createProfile() {
+        return new Profile();
+    }
+
+    /**
      * Create an instance of {@link MapElementsArray }
      * 
      */
@@ -55,6 +64,15 @@ public class ObjectFactory {
      */
     public MapElements createMapElements() {
         return new MapElements();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Profile }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://webservice.ojekonline.java.org/", name = "Profile")
+    public JAXBElement<Profile> createProfile(Profile value) {
+        return new JAXBElement<Profile>(_Profile_QNAME, Profile.class, null, value);
     }
 
     /**
