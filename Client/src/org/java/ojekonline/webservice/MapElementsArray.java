@@ -10,16 +10,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for babi complex type.
+ * <p>Java class for mapElementsArray complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="babi">
+ * &lt;complexType name="mapElementsArray">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="results" type="{http://webservice.ojekonline.java.org/}mapElementsArray" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="item" type="{http://webservice.ojekonline.java.org/}mapElements" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -29,41 +29,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "babi", propOrder = {
-    "results"
+@XmlType(name = "mapElementsArray", propOrder = {
+    "item"
 })
-public class Babi {
+public class MapElementsArray {
 
     @XmlElement(nillable = true)
-    protected List<MapElementsArray> results;
+    protected List<MapElements> item;
 
     /**
-     * Gets the value of the results property.
+     * Gets the value of the item property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the results property.
+     * This is why there is not a <CODE>set</CODE> method for the item property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    getResults().add(newItem);
+     *    getItem().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link MapElementsArray }
+     * {@link MapElements }
      * 
      * 
      */
-    public List<MapElementsArray> getResults() {
-        if (results == null) {
-            results = new ArrayList<MapElementsArray>();
+    public List<MapElements> getItem() {
+        if (item == null) {
+            item = new ArrayList<MapElements>();
         }
-        return this.results;
+        return this.item;
     }
 
 }

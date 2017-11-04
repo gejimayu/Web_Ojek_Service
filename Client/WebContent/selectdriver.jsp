@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
@@ -7,6 +7,8 @@
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
 <%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
 <%@ page import = "java.util.ArrayList"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -88,25 +90,33 @@
 		<div class="chosen_driver">
 		
 		<%
-			Babi hasil = new Babi();
-			hasil = ps.findDriver(userid, "Jurang", "ITB");
-			ArrayList<String> res = new ArrayList<String>();
-			res = (ArrayList<String>) hasil.getResults();
+			Babi res = new Babi();
+			res = ps.findDriver(userid, pick, dest);
+	
+			Map<String, String> hasil = new HashMap<String, String>();
 			
-			if (res == null) { 
-		%>
-				<%= userid + 5 %>
-		<%
-			}  
-			else {
-				%>
-	<%
-				for (String isi : res) {
-		%>
-					<%= isi %>
-		<%
-				}
-			} 
+			ArrayList<MapElements> temp = new ArrayList<MapElements>();
+			for (MapElementsArray isi : res.getResults()) {
+				temp = (ArrayList<MapElements>) isi.getItem();
+				for (MapElements konten : temp) { 
+					hasil.put(konten.getKey(), konten.getValue());
+				} %>
+			
+				<table>
+					<tr>
+						<td><img src='<%= hasil.get("prof_pic")  %>'></td>
+						<td id='driver_identification'>
+							<span id='driver_name'><%= hasil.get("name")  %></span><br>
+							<span id='driver_rating'>☆ <%= Float.parseFloat(hasil.get("avgrating"))  %></span> 
+							(<%= hasil.get("num_votes") %> votes) <br>
+							<form action='completeorder.php' method='POST'>
+								<button name='driverid' value='<%=hasil.get("id_driver")%>'>I CHOOSE YOU!</button>
+							</form>
+						</td>
+					</tr>
+				</table>	
+				
+		<%	}
 		%>
 		
 		</div>

@@ -42,6 +42,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link MapElementsArray }
+     * 
+     */
+    public MapElementsArray createMapElementsArray() {
+        return new MapElementsArray();
+    }
+
+    /**
+     * Create an instance of {@link MapElements }
+     * 
+     */
+    public MapElements createMapElements() {
+        return new MapElements();
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link Babi }{@code >}}
      * 
      */
