@@ -1,5 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
+<%@ page import="org.java.ojekonline.webservice.OjekData" %>
+<%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import = "java.util.ArrayList"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,8 +18,26 @@
 <title>Select Driver</title>
 </head>
 <body>
+	<%  
+		int userid = 1;
+		String pick = request.getParameter("picking_point"), 
+				dest = request.getParameter("destination"), 
+				prefdriver = request.getParameter("preferred_driver");	
+		if (pick != null) {
+			session.setAttribute("pick", pick);
+		}
+		if (dest != null) {
+			session.setAttribute("dest", dest);
+		} 
+		if (prefdriver != null) {
+			session.setAttribute("prefdriver", prefdriver);
+		}
+		
+		OjekDataImplService service = new OjekDataImplService();
+		OjekData ps = service.getOjekDataImplPort();
+	%>	  
 	<div>
-		<p id="hi_username">Hi, <b>man</b> !</p>
+		<p id="hi_username">Hi, <b>Pika1</b> !</p>
 		<h1 id="logo">
 			<span id="labelgreen">PR</span>-<span id="labelred">OJEK</span>
 		</h1>
@@ -52,22 +79,36 @@
 	<div class="driverblock">
 		<h2 class="title_driver">PREFERRED DRIVERS:</h2>
 		<div class="chosen_driver">
-			if (request.getParameter("picking_point")) {
-				session.setAttribute("pick", "request.getParameter("picking_point")");
-			}
-			if (request.getParameter("destination")) {
-				session.setAttribute("dest", "request.getParameter("destination")");
-			} 
-			if (request.getParameter("preferred_driver")) {
-				session.setAttribute("prefdriver", "request.getParameter("preferred_driver")");
-			}
-			  
+		
 		</div>
 	</div>
 	
 	<div class="driverblock">
 		<h2 class="title_driver">OTHER DRIVERS:</h2>
 		<div class="chosen_driver">
+		
+		<%
+			Babi hasil = new Babi();
+			hasil = ps.findDriver(userid, "Jurang", "ITB");
+			ArrayList<String> res = new ArrayList<String>();
+			res = (ArrayList<String>) hasil.getResults();
+			
+			if (res == null) { 
+		%>
+				<%= userid + 5 %>
+		<%
+			}  
+			else {
+				%>
+	<%
+				for (String isi : res) {
+		%>
+					<%= isi %>
+		<%
+				}
+			} 
+		%>
+		
 		</div>
 	</div>	
 </body>
