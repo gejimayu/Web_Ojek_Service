@@ -81,8 +81,6 @@ public class OjekDataImpl implements OjekData{
 			 stmt.close();
 		     conn.close();
 		} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				System.out.println("asem");
 				e.printStackTrace();
 		}
 	
@@ -101,21 +99,13 @@ public class OjekDataImpl implements OjekData{
 		try {
 			if (rs.next())
 				result = rs.getString("name");
-			
-			System.out.println(rs.getString("name"));
-			
+		
 			stmt.close();
 	        conn.close();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} 
-		
         
-		if (result == null)
-			return "asu";
-		else
-			return result;
+		return result;
 	}
 
 	@Override
@@ -154,11 +144,17 @@ public class OjekDataImpl implements OjekData{
 	}
 
 	@Override
-	public Babi getProfile(int id_user) {
+	public Babi getProfile(int id_user, int driverstatus) {
 		ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
 		try {
-			String query = 
-					"SELECT * FROM user WHERE id_user = " + Integer.toString(id_user);
+			String query = null;
+			if (driverstatus == 0) {
+				query = "SELECT * FROM user WHERE id_user = " + Integer.toString(id_user);
+			}
+			else {
+				query = "SELECT * FROM user join driver WHERE id_user = id_driver "
+						+ "AND id_user = " + Integer.toString(id_user);
+			}
 			execute(query, 1);
 			if (rs.next()) {
 				System.out.println(rs.getString("name"));
@@ -166,14 +162,16 @@ public class OjekDataImpl implements OjekData{
 				temp.put("name", rs.getString("name"));
 				temp.put("prof_pic", rs.getString("prof_pic"));
 				temp.put("username", rs.getString("username"));
+				if (driverstatus == 1) {
+					temp.put("avgrating", Float.toString(rs.getFloat("avgrating")));
+					temp.put("num_votes", Integer.toString(rs.getInt("num_votes")));
+				}
 				smth.add(temp);
 			}
 			
 			 stmt.close();
 		     conn.close();
 		} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				System.out.println("asem");
 				e.printStackTrace();
 		}
 	
@@ -182,9 +180,70 @@ public class OjekDataImpl implements OjekData{
 		
 		return kampret;
 	}
-	
-	
-	
-	
 
+	@Override
+	public void insertOrder(int id_driver, int id_user, String tgl, String pick, String dest, int rate,
+			String comment) {
+		try {
+			String query = 
+					"INSERT INTO order_data(id_driver, id_user, date_order, origin, destination, rating, comment) " 
+					+ "VALUES ("+ Integer.toString(id_driver) +", "+ Integer.toString(id_user) +", '"
+					+ tgl +"', '"+ pick +"', '"+ dest +"', " 
+					+ Integer.toString(rate) + ", '"+ comment +"')";
+			execute(query, 2);
+			
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void updateDriver(int id_driver, int num_votes, float avgrating) {
+		try {
+			String query = 
+					"UPDATE driver SET avgrating = "+ Float.toString(avgrating) +", "
+							+ "num_votes = "+ Integer.toString(num_votes) +" "
+							+ "WHERE id_driver = "+ Integer.toString(id_driver);
+			execute(query, 3);
+			
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void insertHistory(int id_user, int id_driver, String tgl, String nameuser, String namedriver, String pick,
+			String dest, int rate, String comment, int hide, int driverstatus) {
+		try {
+			String query = null;
+			if (driverstatus == 0) { //userhistory
+				query = 
+						"INSERT INTO user_history(id_user, id_driver, date_order, customer_name, "
+						+ "origin, destination, rating, comment, hide) " 
+						+ "VALUES ("+ Integer.toString(id_user) +", "+ Integer.toString(id_driver) +", '"
+						+ tgl + "', '"+ namedriver +"' , '"+ pick +"', '"+ dest +"', " 
+						+ Integer.toString(rate) + ", '"+ comment +"' , 0)";
+			}
+			else { //driverhistory
+				query = 
+						"INSERT INTO driver_history(id_driver, id_user, date_order, customer_name, "
+						+ "origin, destination, rating, comment, hide) " 
+						+ "VALUES ("+ Integer.toString(id_driver) +", "+ Integer.toString(id_user) +", '"
+						+ tgl + "', '"+ nameuser +"' , '"+ pick +"', '"+ dest +"', " 
+						+ Integer.toString(rate) + ", '"+ comment +"' , 0)";
+			}
+			
+			execute(query, 2);
+			
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+		
+	}
 }

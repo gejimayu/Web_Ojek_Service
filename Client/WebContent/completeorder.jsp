@@ -77,7 +77,7 @@
 	
 		<%
 			Babi res = new Babi();
-			res = ps.getProfile(driverid);
+			res = ps.getProfile(driverid, 0);
 		
 			Map<String, String> hasil = new HashMap<String, String>();
 			
@@ -94,7 +94,7 @@
 	
 		<%	} %>
 	
-		<form action="pickdestination.php?user_id=<?php echo $userid ?>" method="POST" onsubmit="return validateForm2()">
+		<form action="selectdestination.jsp" method="POST" onsubmit="return validateForm2()">
 		    <div class="rate">
 		        <input type="radio" id="star5" name="rate" value="5" /><label for="star5" title="text">5 stars</label>
 		        <input type="radio" id="star4" name="rate" value="4" /><label for="star4" title="text">4 stars</label>
