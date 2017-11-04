@@ -1,10 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ page import="javax.xml.namespace.QName" %>
-<%@ page import="javax.xml.ws.Service" %>
-<%@ page import="java.net.URL" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
+<%@ page import = "java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -12,15 +17,24 @@
 <link rel="stylesheet" type="text/css" href="style/kepala.css">
 <title>Order</title>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Pick Destination</title>
+<script src="js/validateform.js"></script>
 </head>
 <body>
+	<%
+		int userid = 1;
+		OjekDataImplService service = new OjekDataImplService();
+		OjekData ps = service.getOjekDataImplPort();
+		
+		String nameuser = ps.getNameUser(userid);
+	%>
+
 	<div>
-		<p id="hi_username">Hi, <b>man</b> !</p>
+		<p id="hi_username">Hi, <b><%= nameuser %></b> !</p>
 		<h1 id="logo">
 			<span id="labelgreen">PR</span>-<span id="labelred">OJEK</span>
 		</h1>
-		<a id="logout" href="../login.php">Logout</a>
+		<a id="logout" href="logout.jsp">Logout</a>
 		<p id="extralogo">wush... wush... ngeeeeenggg...</p>
 	</div>
 
@@ -55,7 +69,7 @@
 		</tr>
 	</table>
 
-	<form action="selectdriver.jsp" method="POST">
+	<form action="selectdriver.jsp" method="POST" onsubmit="return validateForm()">
 		<table id="table_form">
 			<tr>
 				<td class="inputlabel">Picking Point</td>

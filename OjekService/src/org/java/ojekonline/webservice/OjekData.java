@@ -14,4 +14,13 @@ public interface OjekData {
 	
 	@WebMethod
 	public Babi findDriver(int id_user, String pick, String dest);
+	
+	@WebMethod
+	public String getNameUser(int id_user);
+	
+	@WebMethod
+	public Babi findPrefDriver(int id_user, String name);
+	
+	@WebMethod
+	public Babi getProfile(int id_user);
 }
