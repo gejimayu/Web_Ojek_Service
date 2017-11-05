@@ -116,5 +116,23 @@ public class OjekDataImpl implements OjekData {
 		return profile;
 	}
 	
+	@Override
+	public String[50] listLocation(int id_user) {
+		ArrayList<String> locations = new ArrayList<String>();
+		
+		try {
+			String query = "SELECT * FROM pref_location WHERE id_driver = " + id_user;
+			execute(query, 1);
+			while(rs.next()) {
+				locations.add(rs.getString("location"));
+			}
+			stmt.close();
+	        conn.close();
+		}
+		catch (SQLException e) {
+			//error
+		}
+		return locations;
+	}
 
 }

@@ -5,6 +5,8 @@ import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 import javax.xml.ws.RequestWrapper;
 
+import java.util.ArrayList;
+
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface OjekData {
@@ -17,4 +19,8 @@ public interface OjekData {
 	
 	@WebMethod
 	public Profile getProfileInfo(int id_user);
+	
+	@WebMethod
+	public String[50] listLocation(int id_user);
+	
 }

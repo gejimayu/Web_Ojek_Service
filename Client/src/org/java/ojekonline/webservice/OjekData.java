@@ -28,6 +28,19 @@ public interface OjekData {
      * 
      * @param arg0
      * @return
+     *     returns org.java.ojekonline.webservice.ArrayList
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/listLocationRequest", output = "http://webservice.ojekonline.java.org/OjekData/listLocationResponse")
+    public ArrayList listLocation(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns boolean
      */
     @WebMethod

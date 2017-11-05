@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="javax.xml.namespace.QName" %>
 <%@ page import="javax.xml.ws.Service" %>
@@ -6,6 +6,7 @@
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
 <%@ page import="org.java.ojekonline.webservice.Profile" %>
+<%@ page import = "java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -33,10 +34,12 @@
 </head>
 <body>
 	<%
+		int id_user = 1;
+	
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
 		Profile profile = new Profile();
-		profile = ps.getProfileInfo(1);
+		profile = ps.getProfileInfo(id_user);
 	%>
 
 
@@ -54,7 +57,7 @@
     <div class="header" id="header">
           <nav>
             <ul>
-              <li><a href="sel-destination.jsp">ORDER</a></li>
+              <li><a href="seldestination.jsp">ORDER</a></li>
               <li><a href="history-penumpang.jsp">HISTORY</a></li>
               <li><a href="profile.jsp" class="option-active" >MY PROFILE</a></li>
             </ul>
@@ -79,7 +82,45 @@
     </div>
 
     <!-- preferred-location -->
-    
+    <%
+			ArrayList<String> locations = new ArrayList<String>();
+    		locations = ps.listLocation(id_user);
+    		if(locations.size() == 0) {
+    %>			
+    <%= locations.size() %>
+    			 <div class="preferred-location">
+    			 	<div class="location-header">
+				          <h4 class="profile-title">PREFERRED LOCATIONS:</h4>
+				          <a href="edit-location.jsp" class="fa fa-pencil fa-2x edit-location-icon tooltip"><span class="tooltiptext">Edit Location</span></a>
+				    </div>
+				    <div class="list-location">
+				       <ul> No location was inserted </ul>
+				    </div>
+				 </div>
+				  
+    <% 	
+    		}
+    		else { 
+    			for (String location : locations) {
+	%>
+			
+				<div class="preferred-location">
+    			 	<div class="location-header">
+				          <h4 class="profile-title">PREFERRED LOCATIONS:</h4>
+				          <a href="edit-location.jsp" class="fa fa-pencil fa-2x edit-location-icon tooltip"><span class="tooltiptext">Edit Location</span></a>
+				    </div>
+				    <div class="list-location">
+				        <ul>
+				        	<li>
+				       			 <i class="fa fa-angle-right" aria-hidden="true"><span>&nbsp;<%= location %>  </span></i></li>
+				        	</li>
+				        </ul>
+				    </div>
+				 </div>ss
+				
+		<%		}
+    		}
+		%>
 
   </div>
 
