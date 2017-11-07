@@ -30,5 +30,5 @@ public interface OjekData {
 	public void deleteLocation(int id_driver, String location);
 	
 	@WebMethod
-	public void saveLocation(int id_driver, String old_loc, String new_load);
+	public void saveLocation(int id_driver, String old_loc, String new_loc);
 }

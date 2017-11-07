@@ -77,7 +77,7 @@
 		           		out.println("<td class=\"kolom-1\">" + counter + "</td>");
 		           		out.println("<td class=\"kolom-2\">");
 		      	   			out.println("<form action=\"save-location.jsp\" method=\"POST\" class=\"form-save\">");
-		          				out.println("<input type=\"hidden\" name=\"username\" value=\"" + profile.getUsername() +  "\">");
+		          				out.println("<input type=\"hidden\" name=\"id_user\" value=\"" + id_user +  "\">");
 		    					out.println("<input type=\"hidden\" name=\"old-location\" value=\"" + hasil.get("location") + "\">");
 		     					out.println("<input id=\"" + hasil.get("location") + "\" type=\"hidden\" name=\"new-location\" value=\"" + hasil.get("location") + "\">");
 		        				out.println("<span id=\"" + hasil.get("location") + "s\">" + hasil.get("location") + "</span>");

@@ -171,7 +171,16 @@ public class OjekDataImpl implements OjekData {
 	}
 	
 	@Override
-	public void saveLocation(int id_driver, String old_loc, String new_load) {
-		
+	public void saveLocation(int id_driver, String old_loc, String new_loc) {
+		try {
+			String query = 
+					"UPDATE pref_location SET location='" + new_loc + "' WHERE  location='" + old_loc + "' AND id_driver = " + id_driver +"";
+			execute(query, 2);
+			
+			stmt.close();
+		    conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
 	}
 }
