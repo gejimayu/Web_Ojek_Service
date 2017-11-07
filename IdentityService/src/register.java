@@ -23,6 +23,7 @@ public class register extends HttpServlet {
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	static final String DB_URL = "jdbc:mysql://localhost:3306/ojekaccount";
+	static final String DB_URL1 = "jdbc:mysql://localhost:3306/ojekonline";
 
 	//  Database credentials
 	static final String USER = "root";
@@ -63,7 +64,9 @@ public class register extends HttpServlet {
 		
 		//Connect to database
 	    Statement stmt = null;
+	    Statement stmt1 = null;
 	    Connection conn = null;
+	    Connection conn1 = null;
 	    request.setAttribute("message", "sukses");
 	    try {
 	    	// Register JDBC driver
@@ -72,9 +75,13 @@ public class register extends HttpServlet {
 	      	// Open a connection
 	        out.println("try to connect");
 	        conn = DriverManager.getConnection(DB_URL, USER, PASS);
+	        conn1 = DriverManager.getConnection(DB_URL1, USER, PASS);
+	        
 	        out.println("success");
 	          
 	        stmt = (Statement) conn.createStatement();
+	        stmt1 = (Statement) conn1.createStatement();
+	        
 			ResultSet rs = stmt.executeQuery("select id_user from userdata where username='"+username+"' or email='"+email+"'");
 		    if(rs.next()) {
 		    	out.println("Username or Email unavailable");
@@ -90,15 +97,17 @@ public class register extends HttpServlet {
 	        rs =stmt.executeQuery("SELECT id_user FROM userdata WHERE username = '" + username + "'");
 	        if (rs.next()) {
 	        	int id = rs.getInt("id_user");
-	        	out.println(id);
+	        	out.println("insert token");
 	        	stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '2020-10-10')");
+	        	stmt1.executeUpdate("INSERT INTO driver VALUES (" + id + ", 0, 0)");
+		        out.println("insert database driver");
 	        }
 	        response.setStatus(HttpServletResponse.SC_OK );
 	        response.addHeader("message", "ok");
-	        //response.sendRedirect("http://localhost:8080/Client/selectdestination.jsp");
 	        stmt.close();
 	        conn.close();
-	        //return;
+	        stmt1.close();
+	        conn1.close();
 	    } 
 	    catch(SQLException se) {
 	    	//Handle errors for JDBC

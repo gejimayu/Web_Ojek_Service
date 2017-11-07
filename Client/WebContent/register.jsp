@@ -55,7 +55,11 @@
 		    contentType: 'application/json',
 		    success: function(data, status, xhr){
 		    	console.log('register success');
-		    	window.location.href = "http://localhost:8080/Client/selectdestination.jsp";
+		    	if (driverstatus == "false")
+			    	window.location.href = "http://localhost:8080/Client/selectdestination.jsp"
+		    	else
+		    		window.location.href = "http://localhost:8080/Client/profile.jsp";
+		    		
 	        },
 			error: function(data, status, xhr){
 		    	console.log('username or email has already been taken');
