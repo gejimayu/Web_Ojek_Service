@@ -33,4 +33,16 @@ public interface OjekData {
 	@WebMethod
 	public void insertHistory(int id_user, int id_driver, String tgl, String nameuser, String namedriver, 
 			String pick, String dest, int rate, String comment, int hide, int driverstatus);
+	
+	@WebMethod
+	public Babi getUserHistory(int id_user);
+	
+	@WebMethod
+	public Babi getDriverHistory(int id_driver);
+	
+	@WebMethod
+	public void hideUserHistory(int id_history);
+	
+	@WebMethod
+	public void hideDriverHistory(int id_history);
 }

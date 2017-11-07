@@ -25,15 +25,6 @@
 		String pick = request.getParameter("picking_point"), 
 				dest = request.getParameter("destination"), 
 				prefdriver = request.getParameter("preferred_driver");	
-		if (pick != null) {
-			session.setAttribute("pick", pick);
-		}
-		if (dest != null) {
-			session.setAttribute("dest", dest);
-		} 
-		if (prefdriver != null) {
-			session.setAttribute("prefdriver", prefdriver);
-		}
 		
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
@@ -105,6 +96,8 @@
 							<span id='driver_rating'>☆ <%= Float.parseFloat(hasil.get("avgrating"))  %></span> 
 							(<%= hasil.get("num_votes") %> votes) <br>
 							<form action='completeorder.jsp' method='POST'>
+								<input type="hidden" name="pick" value="<%=pick%>">
+								<input type="hidden" name="dest" value="<%=dest%>">
 								<button name='driverid' value='<%=hasil.get("id_driver")%>'>I CHOOSE YOU!</button>
 							</form>
 						</td>

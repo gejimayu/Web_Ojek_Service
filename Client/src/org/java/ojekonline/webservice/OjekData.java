@@ -27,6 +27,16 @@ public interface OjekData {
     /**
      * 
      * @param arg0
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/hideDriverHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/hideDriverHistoryResponse")
+    public void hideDriverHistory(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns boolean
      */
@@ -184,5 +194,41 @@ public interface OjekData {
         int arg9,
         @WebParam(name = "arg10", partName = "arg10")
         int arg10);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns org.java.ojekonline.webservice.Babi
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getUserHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/getUserHistoryResponse")
+    public Babi getUserHistory(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns org.java.ojekonline.webservice.Babi
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getDriverHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/getDriverHistoryResponse")
+    public Babi getDriverHistory(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/hideUserHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/hideUserHistoryResponse")
+    public void hideUserHistory(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
 
 }

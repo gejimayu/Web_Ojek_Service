@@ -28,13 +28,13 @@
 		OjekData ps = service.getOjekDataImplPort();
 		
 		String nameuser = ps.getNameUser(userid);
-		if (session.getAttribute("pick") != null && session.getAttribute("dest") != null 
-				&& session.getAttribute("driverid") != null) {
+		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+				&& request.getParameter("driverid") != null) {
 			
 			//retrieve needed data order
-			int driverid = (Integer) session.getAttribute("driverid");
-			String pick = (String) session.getAttribute("pick");
-			String dest = (String) session.getAttribute("dest");
+			int driverid = Integer.parseInt(request.getParameter("driverid"));
+			String pick = (String) request.getParameter("pick");
+			String dest = (String) request.getParameter("dest");
 			int rate = Integer.parseInt(request.getParameter("rate"));
 			String comment = request.getParameter("comment");
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");

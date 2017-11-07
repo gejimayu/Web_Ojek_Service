@@ -246,4 +246,97 @@ public class OjekDataImpl implements OjekData{
 		}
 		
 	}
+	
+	@Override
+	public Babi getUserHistory(int id_user) {
+		ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
+		try {
+			String query = null;
+			query = "SELECT * FROM user_history WHERE id_user = " + Integer.toString(id_user) + " and hide = 0";
+			System.out.println(query);
+			execute(query, 1);
+			while (rs.next()) {
+				System.out.println(rs.getString("comment"));
+				Map<String, String> temp = new HashMap<String, String>();
+				temp.put("id_history", Integer.toString(rs.getInt("id_history")));
+				temp.put("id_user", Integer.toString(rs.getInt("id_user")));
+				temp.put("id_driver", Integer.toString(rs.getInt("id_driver")));
+				temp.put("date_order", rs.getString("date_order"));
+				temp.put("customer_name", rs.getString("customer_name"));
+				temp.put("origin", rs.getString("origin"));
+				temp.put("destination", rs.getString("destination"));
+				temp.put("rating", Integer.toString(rs.getInt("rating")));
+				temp.put("comment", rs.getString("comment"));
+				temp.put("hide", Integer.toString(rs.getInt("hide")));
+				smth.add(temp);
+			}
+			
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	
+		Babi kampret = new Babi();
+		kampret.setResults(smth);
+		
+		return kampret;
+	}
+	
+	@Override
+	public Babi getDriverHistory(int id_driver) {
+		ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
+		try {
+			String query = null;
+			query = "SELECT * FROM driver_history WHERE id_driver = " + Integer.toString(id_driver) + "and hide ='0'";
+			execute(query, 1);
+			if (rs.next()) {
+				System.out.println(rs.getString("name"));
+				Map<String, String> temp = new HashMap<String, String>();
+				temp.put("id_history", rs.getString("id_history"));
+				temp.put("id_user", rs.getString("id_user"));
+				temp.put("id_driver", rs.getString("id_driver"));
+				temp.put("date_order", rs.getString("date_order"));
+				temp.put("date_order", rs.getString("costumer_name"));
+				temp.put("origin", rs.getString("origin"));
+				temp.put("destination", rs.getString("destination"));
+				temp.put("rating", rs.getString("rating"));
+				temp.put("comment", rs.getString("comment"));
+				temp.put("hide", rs.getString("hide"));
+				smth.add(temp);
+			}
+			
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	
+		Babi kampret = new Babi();
+		kampret.setResults(smth);
+		
+		return kampret;
+	}
+	
+	public void hideUserHistory(int id_history) {
+		try {
+			String query = "UPDATE user_history SET hide=1 WHERE id_history =" + Integer.toString(id_history);
+			execute(query, 3);
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
+	
+	public void hideDriverHistory(int id_history) {
+		try {
+			String query = "UPDATE driver_history SET hide=1 WHERE id_history =" + Integer.toString(id_history);
+			execute(query, 3);
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
 }

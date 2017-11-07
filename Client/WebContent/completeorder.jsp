@@ -22,8 +22,9 @@
 <body>
 	<%  
 		int userid = 1;
+		String pick = request.getParameter("picking_point"), 
+				dest = request.getParameter("destination");
 		int driverid =  Integer.parseInt(request.getParameter("driverid"));
-		session.setAttribute("driverid", driverid);
 		
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
@@ -104,6 +105,9 @@
 		    </div>
 			<textarea id="comment" name="comment" placeholder="Your comment..."></textarea>
 			<button>Complete<br>Order</button>
+			<input type="hidden" name="pick" value="<%=pick%>">
+			<input type="hidden" name="dest" value="<%=dest%>">
+			<input type="hidden" name="driverid" value="<%=driverid%>">
 		</form>
 	</div>
 </body>
