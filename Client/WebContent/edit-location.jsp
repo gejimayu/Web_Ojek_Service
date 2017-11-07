@@ -1,0 +1,106 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="ISO-8859-1"%>
+<%@ page import="javax.xml.namespace.QName" %>
+<%@ page import="javax.xml.ws.Service" %>
+<%@ page import="java.net.URL" %>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="org.java.ojekonline.webservice.OjekData" %>
+<%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Profile" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
+<%@ page import = "java.util.ArrayList"%>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ngo-Jek - Ojek Online Clone Website">
+    <meta name="author" content="Taufan Mahaputra, Robby Syaifullah, M Rafli">
+    <!-- Properties Title -->
+    <link rel="shortcut icon" href="editlocation.css" />
+    <title>Ngo-Jek</title>
+
+    <!-- Custom CSS -->
+    <link href="style/main.css" rel="stylesheet" type='text/css' />
+    <link href="style/editlocation.css" rel="stylesheet" type='text/css' />
+    <!-- Custom Fonts -->
+    <link href="style/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+    <link href="style/editlocation.css" rel="stylesheet">
+    <!-- Script -->
+    <script src="javascript/edit-location.js"></script>
+</head>
+<%
+		int id_user = 1;
+	
+		OjekDataImplService service = new OjekDataImplService();
+		OjekData ps = service.getOjekDataImplPort();
+		Profile profile = new Profile();
+		profile = ps.getProfileInfo(id_user);
+%>
+<body>
+	<div class="container">
+        <br>
+        <!-- Header Section -->
+        <div class="profile-header">
+            <h2 class="profile-title">EDIT PREFERRED LOCATION</h2>
+        </div>
+        
+        <!-- Table Section-->
+        <table>
+            <tr>
+                <th class="kolom-1">No</th>
+                <th class="kolom-2">Location</th>
+                <th class="kolom-3">Actions</th>
+            </tr>
+           <%
+           	out.println("<tr>");
+           	out.println("<td class=\"kolom-1\">" + "1" + "</td>");
+           	out.println("<td class=\"kolom-2\">");
+      	   	out.println("<form action=\"../src/save-location.php\" method=\"POST\" class=\"form-save\">");
+          	out.println("<input type=\"hidden\" name=\"username\" value=\"" + "taufan" +  "\">");
+    		out.println("<input type=\"hidden\" name=\"old-location\" value=\"" + "test" + "\">");
+     		out.println("<input id=\"" + "test" + "\" type=\"hidden\" name=\"new-location\" value=\"" + "test" + "\">");
+        	out.println("<span id=\"" + "test" + "s\">" + "test" + "</span>");
+        	out.println("</td>");
+        	out.println("<td class=\"kolom-3\">");
+        	out.println("<i id=\"" + "test" + "pencil\"style=\"margin-left:8px;cursor:pointer;\" class=\"fa fa-pencil\" aria-hidden=\"true\" onclick=\"editLocation('" + "test" + "')\" ></i>");
+        	out.println("<button id=\"" + "test" + "save\" type=\"submit\" class=\"save-button\"> ");
+        	out.println("<i  class=\"fa fa-floppy-o\" aria-hidden=\"true\"></i> ");
+        	out.println("</button> </form>");
+        	out.println("<i style=\"margin-left:15px;cursor:pointer;\" class=\"fa fa-times\" aria-hidden=\"true\" onclick=\"deleteLocation('" + "test" + "')\" ></i>");
+        	out.println("</td>");
+        	out.println("</tr>");
+        	%>
+        </table>
+
+        <!--Field Form-->
+        <form class="form-field" action="add-location.jsp" method="POST">
+            <h3> ADD NEW LOCATION: </h3>
+            <input class="form-textbox" type="text" name="location">&emsp;
+            <button class="btn-add">ADD</button>
+        </form>
+         <button class="form-field btn-back"><a href="profile.jsp"> BACK </a> </button>
+
+        <div id="modalMessage" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Are you sure want to delete this location?</p><span id="nameLocation"></span>
+
+            <form action="delete-location.jsp" method="POST">
+                <input type="hidden" name="username" value="<?php echo $username ?>">
+                <input type="hidden" name="location" value="" id="location">
+                <input type="submit" name="delete" value="YES">
+            </form>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
