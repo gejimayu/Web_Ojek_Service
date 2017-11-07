@@ -117,14 +117,16 @@ public class OjekDataImpl implements OjekData {
 	}
 	
 	@Override
-	public String[50] listLocation(int id_user) {
-		ArrayList<String> locations = new ArrayList<String>();
+	public Babi listLocation(int id_user) {
+		 ArrayList<Map<String, String>> locations = new ArrayList<Map<String, String>>();
 		
 		try {
 			String query = "SELECT * FROM pref_location WHERE id_driver = " + id_user;
 			execute(query, 1);
 			while(rs.next()) {
-				locations.add(rs.getString("location"));
+				Map<String, String> temp = new HashMap<String,String>();
+				temp.put("location", rs.getString("location"));
+				locations.add(temp);
 			}
 			stmt.close();
 	        conn.close();
@@ -132,7 +134,10 @@ public class OjekDataImpl implements OjekData {
 		catch (SQLException e) {
 			//error
 		}
-		return locations;
+		
+		Babi output = new Babi();
+		output.setResults(locations);
+		return output;
 	}
 
 }

@@ -28,27 +28,14 @@ public interface OjekData {
      * 
      * @param arg0
      * @return
-     *     returns org.java.ojekonline.webservice.ArrayList
+     *     returns org.java.ojekonline.webservice.Babi
      */
     @WebMethod
     @WebResult(partName = "return")
     @Action(input = "http://webservice.ojekonline.java.org/OjekData/listLocationRequest", output = "http://webservice.ojekonline.java.org/OjekData/listLocationResponse")
-    public ArrayList listLocation(
+    public Babi listLocation(
         @WebParam(name = "arg0", partName = "arg0")
         int arg0);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/validateTokenRequest", output = "http://webservice.ojekonline.java.org/OjekData/validateTokenResponse")
-    public boolean validateToken(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
 
     /**
      * 
@@ -68,6 +55,19 @@ public interface OjekData {
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
         String arg2);
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/validateTokenRequest", output = "http://webservice.ojekonline.java.org/OjekData/validateTokenResponse")
+    public boolean validateToken(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
 
     /**
      * 

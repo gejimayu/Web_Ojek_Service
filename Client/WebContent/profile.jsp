@@ -3,10 +3,15 @@
 <%@ page import="javax.xml.namespace.QName" %>
 <%@ page import="javax.xml.ws.Service" %>
 <%@ page import="java.net.URL" %>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
 <%@ page import="org.java.ojekonline.webservice.Profile" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
 <%@ page import = "java.util.ArrayList"%>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,7 +30,7 @@
     <link href="style/main.css" rel="stylesheet" type='text/css'/>
     <link href="style/profile.css" rel="stylesheet" type='text/css'/>
     <!-- Custom Fonts -->
-    <link href="assets/stylesheets/font-awesome.css" rel="stylesheet">
+    <link href="style/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
@@ -46,7 +51,7 @@
  	<div class="container">
     <!-- navbar -->
     <div class="navbar">
-      <img src="assets/image/yesbos.png" class="logo">
+      <img src="img/yesbos.png" class="logo">
       <div class="logout">
         <p style="margin-bottom: 2px;">Hi, <strong><%= profile.getUsername() %></strong> !</p>
         <a href="index.php">Logout</a>
@@ -74,7 +79,14 @@
           <img src="#imageprofile">
           <h3 style="margin-bottom: 5px;"> @<%= profile.getUsername() %> </h3>
           <%= profile.getFullName() %><br>
-          <%= profile.getDriver() %>
+          <% String driver_status = profile.getDriver();
+     	  		if(driver_status.equals("true")) {
+     	  			out.println("Driver | <i class=\"fa fa-star\" aria-hidden=\"true\" style=\"color: #ffa500;\"><strong>&nbsp;4.7</strong></i> &nbsp;(1,728 votes)");
+     	  		}
+     	  		else {
+     	  			out.println("Non-Driver");
+     	  		}
+     	  %>
           <br>
           <i class="fa fa-envelope-o" aria-hidden="true">&nbsp; <%= profile.getUsername() %></i><br>
           <i class="fa fa-phone" aria-hidden="true">&nbsp; <%= profile.getPhoneNumber() %></i>
@@ -82,46 +94,49 @@
     </div>
 
     <!-- preferred-location -->
-    <%
-			ArrayList<String> locations = new ArrayList<String>();
-    		locations = ps.listLocation(id_user);
-    		if(locations.size() == 0) {
-    %>			
-    <%= locations.size() %>
-    			 <div class="preferred-location">
-    			 	<div class="location-header">
-				          <h4 class="profile-title">PREFERRED LOCATIONS:</h4>
-				          <a href="edit-location.jsp" class="fa fa-pencil fa-2x edit-location-icon tooltip"><span class="tooltiptext">Edit Location</span></a>
-				    </div>
-				    <div class="list-location">
-				       <ul> No location was inserted </ul>
-				    </div>
-				 </div>
-				  
-    <% 	
-    		}
-    		else { 
-    			for (String location : locations) {
-	%>
-			
-				<div class="preferred-location">
+	<% if(driver_status.equals("true")) { %>
+    <div class="preferred-location">
     			 	<div class="location-header">
 				          <h4 class="profile-title">PREFERRED LOCATIONS:</h4>
 				          <a href="edit-location.jsp" class="fa fa-pencil fa-2x edit-location-icon tooltip"><span class="tooltiptext">Edit Location</span></a>
 				    </div>
 				    <div class="list-location">
 				        <ul>
-				        	<li>
-				       			 <i class="fa fa-angle-right" aria-hidden="true"><span>&nbsp;<%= location %>  </span></i></li>
-				        	</li>
-				        </ul>
-				    </div>
-				 </div>ss
-				
-		<%		}
-    		}
+    	<%
+		    Babi res = new Babi();
+			res = ps.listLocation(id_user);
+			Map<String, String> hasil = new HashMap<String, String>();
+			
+			int i;
+			int counter = 0;
+			ArrayList<MapElements> temp = new ArrayList<MapElements>();
+			if(res.getResults().size() != 0) {
+				for (MapElementsArray isi : res.getResults()) {
+					temp = (ArrayList<MapElements>) isi.getItem();
+					for (MapElements konten : temp) { 
+						hasil.put(konten.getKey(), konten.getValue());
+					}
+					
+					i = 0;
+					out.print("<li>");
+					while(i < counter) {
+			           	i++;
+			           	out.print("&emsp;");
+			        }
+					out.println("<i class=\"fa fa-angle-right\" aria-hidden=\"true\"><span>&nbsp;" + hasil.get("location") + "</span></i></li>");
+					counter++;
+	    		}
+			}
+			else {
+				out.println("No location was inserted");
+			}
 		%>
-
+						</ul>
+				    </div>
+				 </div>
+		<%
+			}
+		%>
   </div>
 
 	

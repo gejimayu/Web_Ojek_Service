@@ -21,6 +21,6 @@ public interface OjekData {
 	public Profile getProfileInfo(int id_user);
 	
 	@WebMethod
-	public String[50] listLocation(int id_user);
+	public Babi listLocation(int id_user);
 	
 }
