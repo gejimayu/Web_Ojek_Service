@@ -1,10 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@ page import="javax.xml.namespace.QName" %>
-<%@ page import="javax.xml.ws.Service" %>
-<%@ page import="java.net.URL" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
+<%@ page import = "java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,9 +37,32 @@
 	<%
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
+		
+		Babi res = new Babi();
+		res = ps.getUserHistory(10);
+		if (res != null){
+			Map<String, String> hasil = new HashMap<String, String>();
+			ArrayList<MapElements> temp = new ArrayList<MapElements>();
+			for (MapElementsArray isi : res.getResults()) {
+				temp = (ArrayList<MapElements>) isi.getItem();
+				for (MapElements konten : temp) { 
+					hasil.put(konten.getKey(), konten.getValue());
+				} %>
+				<div>
+				<%= hasil.get("id_history") %><br>
+				<%= hasil.get("id_driver") %><br>
+				<%= hasil.get("date_order") %><br>
+				<%= hasil.get("costumer_name") %><br>
+				<%= hasil.get("origin") %><br>
+				<%= hasil.get("destination") %><br>
+				<%= hasil.get("rating") %><br>
+				<%= hasil.get("comment") %><br>
+				</div>
+			<%
+			}
+		}
+			
+		
 	%>
-	<div>
-	<
-	</div>
 </body>
 </html>

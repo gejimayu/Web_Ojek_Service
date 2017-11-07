@@ -35,12 +35,10 @@ public interface OjekData {
 			String pick, String dest, int rate, String comment, int hide, int driverstatus);
 	
 	@WebMethod
-	public Babi getUserHistory(int id_history, int id_user, int id_driver, String date_order, String costumer_name, String origin,
-			String destinat5ion, int rating, String comment, int hide);
+	public Babi getUserHistory(int id_user);
 	
 	@WebMethod
-	public Babi getDriverHistory(int id_history, int id_user, int id_driver, String date_order, String costumer_name, String origin,
-			String destinat5ion, int rating, String comment, int hide);
+	public Babi getDriverHistory(int id_driver);
 	
 	@WebMethod
 	public void hideUserHistory(int id_history);

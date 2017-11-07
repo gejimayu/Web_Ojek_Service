@@ -26,22 +26,6 @@ public interface OjekData {
 
     /**
      * 
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns org.java.ojekonline.webservice.Babi
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getProfileRequest", output = "http://webservice.ojekonline.java.org/OjekData/getProfileResponse")
-    public Babi getProfile(
-        @WebParam(name = "arg0", partName = "arg0")
-        int arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        int arg1);
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns boolean
@@ -55,16 +39,19 @@ public interface OjekData {
 
     /**
      * 
+     * @param arg1
      * @param arg0
      * @return
-     *     returns java.lang.String
+     *     returns org.java.ojekonline.webservice.Babi
      */
     @WebMethod
     @WebResult(partName = "return")
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getNameUserRequest", output = "http://webservice.ojekonline.java.org/OjekData/getNameUserResponse")
-    public String getNameUser(
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getProfileRequest", output = "http://webservice.ojekonline.java.org/OjekData/getProfileResponse")
+    public Babi getProfile(
         @WebParam(name = "arg0", partName = "arg0")
-        int arg0);
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        int arg1);
 
     /**
      * 
@@ -96,25 +83,6 @@ public interface OjekData {
 
     /**
      * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns org.java.ojekonline.webservice.Babi
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/findDriverRequest", output = "http://webservice.ojekonline.java.org/OjekData/findDriverResponse")
-    public Babi findDriver(
-        @WebParam(name = "arg0", partName = "arg0")
-        int arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        String arg1,
-        @WebParam(name = "arg2", partName = "arg2")
-        String arg2);
-
-    /**
-     * 
      * @param arg1
      * @param arg0
      * @return
@@ -128,22 +96,6 @@ public interface OjekData {
         int arg0,
         @WebParam(name = "arg1", partName = "arg1")
         String arg1);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     */
-    @WebMethod
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/updateDriverRequest", output = "http://webservice.ojekonline.java.org/OjekData/updateDriverResponse")
-    public void updateDriver(
-        @WebParam(name = "arg0", partName = "arg0")
-        int arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        int arg1,
-        @WebParam(name = "arg2", partName = "arg2")
-        float arg2);
 
     /**
      * 
@@ -187,16 +139,55 @@ public interface OjekData {
 
     /**
      * 
-     * @param arg3
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getNameUserRequest", output = "http://webservice.ojekonline.java.org/OjekData/getNameUserResponse")
+    public String getNameUser(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
+
+    /**
+     * 
      * @param arg2
-     * @param arg5
-     * @param arg4
      * @param arg1
      * @param arg0
-     * @param arg7
-     * @param arg6
-     * @param arg9
-     * @param arg8
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/updateDriverRequest", output = "http://webservice.ojekonline.java.org/OjekData/updateDriverResponse")
+    public void updateDriver(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        int arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        float arg2);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns org.java.ojekonline.webservice.Babi
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/findDriverRequest", output = "http://webservice.ojekonline.java.org/OjekData/findDriverResponse")
+    public Babi findDriver(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        String arg2);
+
+    /**
+     * 
+     * @param arg0
      * @return
      *     returns org.java.ojekonline.webservice.Babi
      */
@@ -205,25 +196,7 @@ public interface OjekData {
     @Action(input = "http://webservice.ojekonline.java.org/OjekData/getUserHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/getUserHistoryResponse")
     public Babi getUserHistory(
         @WebParam(name = "arg0", partName = "arg0")
-        int arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        int arg1,
-        @WebParam(name = "arg2", partName = "arg2")
-        int arg2,
-        @WebParam(name = "arg3", partName = "arg3")
-        String arg3,
-        @WebParam(name = "arg4", partName = "arg4")
-        String arg4,
-        @WebParam(name = "arg5", partName = "arg5")
-        String arg5,
-        @WebParam(name = "arg6", partName = "arg6")
-        String arg6,
-        @WebParam(name = "arg7", partName = "arg7")
-        int arg7,
-        @WebParam(name = "arg8", partName = "arg8")
-        String arg8,
-        @WebParam(name = "arg9", partName = "arg9")
-        int arg9);
+        int arg0);
 
     /**
      * 
@@ -237,16 +210,7 @@ public interface OjekData {
 
     /**
      * 
-     * @param arg3
-     * @param arg2
-     * @param arg5
-     * @param arg4
-     * @param arg1
      * @param arg0
-     * @param arg7
-     * @param arg6
-     * @param arg9
-     * @param arg8
      * @return
      *     returns org.java.ojekonline.webservice.Babi
      */
@@ -255,25 +219,7 @@ public interface OjekData {
     @Action(input = "http://webservice.ojekonline.java.org/OjekData/getDriverHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/getDriverHistoryResponse")
     public Babi getDriverHistory(
         @WebParam(name = "arg0", partName = "arg0")
-        int arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        int arg1,
-        @WebParam(name = "arg2", partName = "arg2")
-        int arg2,
-        @WebParam(name = "arg3", partName = "arg3")
-        String arg3,
-        @WebParam(name = "arg4", partName = "arg4")
-        String arg4,
-        @WebParam(name = "arg5", partName = "arg5")
-        String arg5,
-        @WebParam(name = "arg6", partName = "arg6")
-        String arg6,
-        @WebParam(name = "arg7", partName = "arg7")
-        int arg7,
-        @WebParam(name = "arg8", partName = "arg8")
-        String arg8,
-        @WebParam(name = "arg9", partName = "arg9")
-        int arg9);
+        int arg0);
 
     /**
      * 
