@@ -23,4 +23,12 @@ public interface OjekData {
 	@WebMethod
 	public Babi listLocation(int id_user);
 	
+	@WebMethod
+	public void addLocation(int id_driver, String location);
+	
+	@WebMethod
+	public void deleteLocation(int id_driver, String location);
+	
+	@WebMethod
+	public void saveLocation(int id_driver, String old_loc, String new_load);
 }

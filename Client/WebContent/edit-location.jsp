@@ -83,7 +83,7 @@
 		        				out.println("<span id=\"" + hasil.get("location") + "s\">" + hasil.get("location") + "</span>");
 		        		out.println("</td>");
 		        		out.println("<td class=\"kolom-3\">");
-		        			out.println("<i id=\"" + hasil.get("location") + "pencil\"style=\"margin-left:8px;cursor:pointer;\" class=\"fa fa-pencil\" aria-hidden=\"true\" onclick=\"editLocation('" + "test" + "')\" ></i>");
+		        			out.println("<i id=\"" + hasil.get("location") + "pencil\"style=\"margin-left:8px;cursor:pointer;\" class=\"fa fa-pencil\" aria-hidden=\"true\" onclick=\"editLocation('" + hasil.get("location") + "')\" ></i>");
 		        			out.println("<button id=\"" + hasil.get("location") + "save\" type=\"submit\" class=\"save-button\"> ");
 		        			out.println("<i  class=\"fa fa-floppy-o\" aria-hidden=\"true\"></i> ");
 		        			out.println("</button> </form>");
@@ -100,7 +100,8 @@
         <!--Field Form-->
         <form class="form-field" action="add-location.jsp" method="POST">
             <h3> ADD NEW LOCATION: </h3>
-            <input class="form-textbox" type="text" name="location">&emsp;
+            <input type="hidden" name="id_user" value="<%= id_user %>">
+            <input class="form-textbox" type="text" name="location" required>&emsp;
             <button class="btn-add">ADD</button>
         </form>
          <button class="form-field btn-back"><a href="profile.jsp"> BACK </a> </button>

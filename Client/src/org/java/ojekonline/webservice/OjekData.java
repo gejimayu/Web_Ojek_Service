@@ -28,6 +28,19 @@ public interface OjekData {
      * 
      * @param arg0
      * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/validateTokenRequest", output = "http://webservice.ojekonline.java.org/OjekData/validateTokenResponse")
+    public boolean validateToken(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
+
+    /**
+     * 
+     * @param arg0
+     * @return
      *     returns org.java.ojekonline.webservice.Babi
      */
     @WebMethod
@@ -36,6 +49,48 @@ public interface OjekData {
     public Babi listLocation(
         @WebParam(name = "arg0", partName = "arg0")
         int arg0);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/addLocationRequest", output = "http://webservice.ojekonline.java.org/OjekData/addLocationResponse")
+    public void addLocation(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/deleteLocationRequest", output = "http://webservice.ojekonline.java.org/OjekData/deleteLocationResponse")
+    public void deleteLocation(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/saveLocationRequest", output = "http://webservice.ojekonline.java.org/OjekData/saveLocationResponse")
+    public void saveLocation(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        String arg2);
 
     /**
      * 
@@ -55,19 +110,6 @@ public interface OjekData {
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
         String arg2);
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/validateTokenRequest", output = "http://webservice.ojekonline.java.org/OjekData/validateTokenResponse")
-    public boolean validateToken(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
 
     /**
      * 

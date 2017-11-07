@@ -1,4 +1,5 @@
 package org.java.ojekonline.webservice;
+import javax.jws.WebMethod;
 import javax.jws.WebService;
 
 import java.sql.*;
@@ -139,5 +140,29 @@ public class OjekDataImpl implements OjekData {
 		output.setResults(locations);
 		return output;
 	}
-
+	
+	@Override
+	public void addLocation(int id_driver, String location) {
+		try {
+			String query = 
+					"INSERT INTO pref_location(id_driver, location) " 
+					+ "VALUES ("+ id_driver + ", '"+ location +"')";
+			execute(query, 2);
+			
+			stmt.close();
+		    conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public void deleteLocation(int id_driver, String location) {
+		
+	}
+	
+	@Override
+	public void saveLocation(int id_driver, String old_loc, String new_load) {
+		
+	}
 }
