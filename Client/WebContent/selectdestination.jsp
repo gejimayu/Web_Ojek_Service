@@ -22,6 +22,7 @@
 <script src="js/validateform.js"></script>
 </head>
 <body>
+	
 	<%
 		int userid = 1;
 		OjekDataImplService service = new OjekDataImplService();
@@ -82,10 +83,7 @@
 		<h1 id="logo">
 			<span id="labelgreen">PR</span>-<span id="labelred">OJEK</span>
 		</h1>
-		<form method="POST" action="selectdestination.jsp">
-			<a id="logout" href="logout.jsp">Logout</a>
-			<input type="hidden" name="logout" value="true">
-		</form>
+		<a id="logout" href="logout.jsp">Logout</a>
 		<p id="extralogo">wush... wush... ngeeeeenggg...</p>
 	</div>
 

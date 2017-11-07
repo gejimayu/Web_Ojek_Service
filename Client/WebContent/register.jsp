@@ -103,7 +103,8 @@
 		    //extract token
 			String token = jsonObject.getString("token");
 			String expiry_time = jsonObject.getString("expiry_time");
-			
+			session.setAttribute("token", token);
+			session.setAttribute("expiry_time", expiry_time);
 			//redirect
 	        response.setStatus(response.SC_MOVED_TEMPORARILY);
 	        if (driverstatus.equals("true")) {

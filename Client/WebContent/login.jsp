@@ -67,12 +67,13 @@
 		    //extract token
 			String token = jsonObject.getString("token");
 			String expiry_time = jsonObject.getString("expiry_time");
-			
+			session.setAttribute("token", token);
+			session.setAttribute("expiry_time", expiry_time);
 			//redirect
 	        response.setStatus(response.SC_MOVED_TEMPORARILY);
 	        response.setHeader("Location", "http://localhost:8080/Client/selectdestination.jsp");
 		} else {
-		    %> <script> alert("Username or email is already used") </script> <%
+		    %> <script> alert("Wrong password / username") </script> <%
 		}  
 		conn.disconnect();
 	}
