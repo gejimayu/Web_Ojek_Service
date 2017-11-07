@@ -60,23 +60,40 @@
                 <th class="kolom-3">Actions</th>
             </tr>
            <%
-           	out.println("<tr>");
-           	out.println("<td class=\"kolom-1\">" + "1" + "</td>");
-           	out.println("<td class=\"kolom-2\">");
-      	   	out.println("<form action=\"../src/save-location.php\" method=\"POST\" class=\"form-save\">");
-          	out.println("<input type=\"hidden\" name=\"username\" value=\"" + "taufan" +  "\">");
-    		out.println("<input type=\"hidden\" name=\"old-location\" value=\"" + "test" + "\">");
-     		out.println("<input id=\"" + "test" + "\" type=\"hidden\" name=\"new-location\" value=\"" + "test" + "\">");
-        	out.println("<span id=\"" + "test" + "s\">" + "test" + "</span>");
-        	out.println("</td>");
-        	out.println("<td class=\"kolom-3\">");
-        	out.println("<i id=\"" + "test" + "pencil\"style=\"margin-left:8px;cursor:pointer;\" class=\"fa fa-pencil\" aria-hidden=\"true\" onclick=\"editLocation('" + "test" + "')\" ></i>");
-        	out.println("<button id=\"" + "test" + "save\" type=\"submit\" class=\"save-button\"> ");
-        	out.println("<i  class=\"fa fa-floppy-o\" aria-hidden=\"true\"></i> ");
-        	out.println("</button> </form>");
-        	out.println("<i style=\"margin-left:15px;cursor:pointer;\" class=\"fa fa-times\" aria-hidden=\"true\" onclick=\"deleteLocation('" + "test" + "')\" ></i>");
-        	out.println("</td>");
-        	out.println("</tr>");
+           
+           Babi res = new Babi();
+			res = ps.listLocation(id_user);
+			Map<String, String> hasil = new HashMap<String, String>();
+			
+			int counter = 1;
+			ArrayList<MapElements> temp = new ArrayList<MapElements>();
+			if(res.getResults().size() != 0) {
+				for (MapElementsArray isi : res.getResults()) {
+					temp = (ArrayList<MapElements>) isi.getItem();
+					for (MapElements konten : temp) { 
+						hasil.put(konten.getKey(), konten.getValue());
+					}
+					out.println("<tr>");
+		           		out.println("<td class=\"kolom-1\">" + counter + "</td>");
+		           		out.println("<td class=\"kolom-2\">");
+		      	   			out.println("<form action=\"save-location.jsp\" method=\"POST\" class=\"form-save\">");
+		          				out.println("<input type=\"hidden\" name=\"username\" value=\"" + profile.getUsername() +  "\">");
+		    					out.println("<input type=\"hidden\" name=\"old-location\" value=\"" + hasil.get("location") + "\">");
+		     					out.println("<input id=\"" + hasil.get("location") + "\" type=\"hidden\" name=\"new-location\" value=\"" + hasil.get("location") + "\">");
+		        				out.println("<span id=\"" + hasil.get("location") + "s\">" + hasil.get("location") + "</span>");
+		        		out.println("</td>");
+		        		out.println("<td class=\"kolom-3\">");
+		        			out.println("<i id=\"" + hasil.get("location") + "pencil\"style=\"margin-left:8px;cursor:pointer;\" class=\"fa fa-pencil\" aria-hidden=\"true\" onclick=\"editLocation('" + "test" + "')\" ></i>");
+		        			out.println("<button id=\"" + hasil.get("location") + "save\" type=\"submit\" class=\"save-button\"> ");
+		        			out.println("<i  class=\"fa fa-floppy-o\" aria-hidden=\"true\"></i> ");
+		        			out.println("</button> </form>");
+		        			out.println("<i style=\"margin-left:15px;cursor:pointer;\" class=\"fa fa-times\" aria-hidden=\"true\" onclick=\"deleteLocation('" + hasil.get("location") + "')\" ></i>");
+		        		out.println("</td>");
+	        		out.println("</tr>");
+					counter++;
+	    		}
+			}
+           	
         	%>
         </table>
 
