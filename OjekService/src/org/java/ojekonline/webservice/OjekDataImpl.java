@@ -158,7 +158,16 @@ public class OjekDataImpl implements OjekData {
 	
 	@Override
 	public void deleteLocation(int id_driver, String location) {
-		
+		try {
+			String query = 
+					"DELETE FROM pref_location WHERE id_driver = " + id_driver + " and location='" + location + "'";
+			execute(query, 2);
+			
+			stmt.close();
+		    conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
 	}
 	
 	@Override

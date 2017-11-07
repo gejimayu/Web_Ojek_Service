@@ -113,7 +113,7 @@
             <p>Are you sure want to delete this location?</p><span id="nameLocation"></span>
 
             <form action="delete-location.jsp" method="POST">
-                <input type="hidden" name="username" value="<?php echo $username ?>">
+                <input type="hidden" name="id_user" value="<%= id_user %>">
                 <input type="hidden" name="location" value="" id="location">
                 <input type="submit" name="delete" value="YES">
             </form>
