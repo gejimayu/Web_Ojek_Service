@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import = "java.net.*, java.io.*, org.json.JSONObject" %>
+<%@ page import="org.java.ojekonline.webservice.OjekData" %>
+<%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,68 +15,6 @@
 <title>Register</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
-	function submitForm() {
-		var driverstatus;
-		if( $("#driverstatus").is(':checked')){
-            driverstatus = "true";
-        }else{
-            driverstatus = "false";
-        }
-		event.preventDefault();
-		var fullname = $('#fullname').val();
-		var username = $('#username').val();
-		var email = $('#email').val();
-		var password = $('#password').val();
-		var confirmpassword = $('#confirmpassword').val();
-		var phonenumber = $('#phonenumber').val();
-		//var driverstatus = $('#driverstatus').val();
-		console.log(fullname, username, email, password, confirmpassword, phonenumber, driverstatus);
-		var myData = {
-			"ojekaccount": {
-		    "fullname": fullname,
-		    "username": username,
-		    "email": email,
-		    "password": password,
-		    "confirmpassword": confirmpassword,
-		    "phonenumber": phonenumber,
-		    "driverstatus": driverstatus,
-		}
-		};
-		
-		var jsonDataObject = new Object();
-		jsonDataObject.fullname = fullname;
-		jsonDataObject.username = username;
-		jsonDataObject.email= email;
-		jsonDataObject.password = password;
-		jsonDataObject.confirmpassword= confirmpassword;
-		jsonDataObject.phonenumber= phonenumber;
-		jsonDataObject.driverstatus= driverstatus;
-	
-		dataSend = JSON.stringify(jsonDataObject);
-		console.log(dataSend);
-		$.ajax({
-			type: "POST",
-			url: "http://localhost:8081/IdentityService/register",
-		    data: dataSend,
-		    //dataType: "json",
-		    contentType: 'application/json',
-		    success: function(data, status, xhr){
-		    	console.log('register success');
-		    	if (driverstatus == "false")
-			    	window.location.href = "http://localhost:8080/Client/selectdestination.jsp"
-		    	else
-		    		window.location.href = "http://localhost:8080/Client/profile.jsp";
-		    		
-	        },
-			error: function(data, status, xhr){
-		    	console.log('username or email has already been taken');
-		    	alert("username or email has already been taken");
-			}
-		  });
-		console.log(JSON.stringify(myData));
-		return false;
-	}
-
 	function checkForm() {
 		// Fetching values from all input fields and storing them in variables.
 		var username = document.forms["myForm"]["username"].value;
@@ -97,7 +42,6 @@
 			return false;
 		}
 		else{
-			submitForm();
 			return true;
 		}
 	}
@@ -106,8 +50,77 @@
 
 </head>
 <body>
+	<%
+	if (request.getParameter("username") != null) {
+		//retrieve data
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		String email = request.getParameter("email");
+		String fullname = request.getParameter("fullname");
+		String phonenumber = request.getParameter("phonenumber");
+		String driverstatus = request.getParameter("driverstatus");
+		
+		//create SOAP object
+		OjekDataImplService service = new OjekDataImplService();
+		OjekData ps = service.getOjekDataImplPort();
+		
+		//insert to SOAP DB
+		ps.insertUser(fullname, username, "img/blank.ava.png", email, phonenumber, driverstatus);
+		
+		//make json object
+		JSONObject account = new JSONObject();
+		account.put("username", username);
+		account.put("password", password);
+		account.put("email", email);
+		String sendme = account.toString();
+		
+		//send post request
+		String query = "http://localhost:8081/IdentityService/register";
+		URL url = new URL(query);
+		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+		conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
+		conn.setDoOutput(true);
+		conn.setDoInput(true);
+		conn.setRequestMethod("POST");
+		OutputStream os = conn.getOutputStream();
+		os.write(sendme.getBytes("UTF-8"));
+		os.close();
+		
+		// read the response
+		StringBuilder sb = new StringBuilder();  
+		int HttpResult = conn.getResponseCode(); 
+		if (HttpResult == HttpURLConnection.HTTP_OK) {
+		    BufferedReader br = new BufferedReader(
+		            new InputStreamReader(conn.getInputStream(), "utf-8"));
+		    String line = null;  
+		    while ((line = br.readLine()) != null) {  
+		        sb.append(line + "\n");  
+		    }
+		    br.close();
+		    //System.out.println("" + sb.toString());  
+		    JSONObject jsonObject = new JSONObject(sb.toString());
+		    
+		    //extract token
+			String token = jsonObject.getString("token");
+			String expiry_time = jsonObject.getString("expiry_time");
+			
+			//redirect
+	        response.setStatus(response.SC_MOVED_TEMPORARILY);
+	        if (driverstatus.equals("true")) {
+				response.setHeader("Location", "http://localhost:8080/Client/profile.jsp");
+	        }
+	        else {
+	        	response.setHeader("Location", "http://localhost:8080/Client/selectdestination.jsp");
+	        }
+		} else {
+		    %> <script> alert("Username or email is already used") </script> <%
+		}  
+		conn.disconnect();
+	}
+	%>
+
 	<center>
-		<form enctype='application/json' id="myForm" onsubmit="return checkForm()">
+		<form method="POST" action="register.jsp" enctype='application/json' id="myForm" onsubmit="return checkForm()">
 			<center style="font-size: 30px"><b>SIGNUP</b></center><br>
 			<table>
 				<tr><td>Your Name</td><td colspan="2"><input id="fullname" name="fullname" type="text" maxlength="20"/></td></tr>
@@ -116,7 +129,7 @@
 				<tr><td>Password</td><td colspan="2"><input id="password" name="password" type="password" maxlength="20"/></td></tr>
 				<tr><td>Confirm Password</td><td colspan="2"><input id="confirmpassword" name="confirmpassword" type="password" maxlength="20"/></td></tr>
 				<tr><td>Phone Number</td><td colspan="2"><input id="phonenumber" name="phonenumber" type="text" maxlength="12"/></td></tr>
-				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" />Also sign me up as a driver!</td></tr>
+				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" value="true"/>Also sign me up as a driver!</td></tr>
 				<tr><td colspan="3" height="10"></td></tr>			
 				<tr><td><a href=login.php>Already have an account?</a></td>
 				<td align="right" colspan="2"><input type='submit' value="REGISTER"></td></tr>

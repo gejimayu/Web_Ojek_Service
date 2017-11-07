@@ -18,13 +18,13 @@ CREATE TABLE user (
 
 INSERT INTO user(name, username, prof_pic, email, phone_number, driver_status) 
 VALUES 	("Pika1", "pikapika", "img/pika1.png", "cobacoba@gmail.com", "085723289999", "true"),
-		("Pika2", "pikapika2", "img/pika2.png", "cobacoba@gmail.com", "085723289999", "true"),
+		("Pika2", "pikapika2", "img/pika2.png", "cobacoba2@gmail.com", "085723289999", "true"),
 		("Pika3", "pikapika3", "img/kakashi.png", "cobacoba3@gmail.com", "085723289999", "true"),
 		("Pika4", "pikapika4", "img/naruto1.png", "cobacoba4@gmail.com", "08239293929", "true"),
 		("Pika5", "pikapika5", "img/naruto2.jpg", "cobacoba5@gmail.com", "08239293929", "true"),
 		("Pika6", "pikapika6", "img/naruto3.jpg", "cobacoba6@gmail.com", "08239293929", "true"),
-		("Pika7", "pikapika7", "img/oro.png", "cobacoba@gmail.com", "085723289999", "false"),
-		("Pika8", "pikapika8", "img/sasuke.png", "cobacoba3@gmail.com", "085723289999", "false"),
+		("Pika7", "pikapika7", "img/oro.png", "cobacoba7@gmail.com", "085723289999", "false"),
+		("Pika8", "pikapika8", "img/sasuke.png", "cobacoba8@gmail.com", "085723289999", "false"),
 		("kuning", "pika", "img/blank.ava.png", "tes@asd.ib", "123412341234", "true"),
 		("asem", "pikalol", "img/220688.jpg", "asd@gmx.s", "12341234", "true");
 

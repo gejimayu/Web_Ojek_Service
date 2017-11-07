@@ -339,4 +339,23 @@ public class OjekDataImpl implements OjekData{
 				e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void insertUser(String name, String username, String prof_pic, String email, String phone_number,
+			String driver_status) {
+		try {
+			String query = null;
+			query = "INSERT INTO user(name, username, prof_pic, email, "
+					+ "phone_number, driver_status) " 
+					+ "VALUES ('"+ name +"' , '"+ username +"', '"+ prof_pic +"', "
+					+ "'" + email + "', '" + phone_number + "', '"+ driver_status +"')" ;
+			
+			execute(query, 2);
+			
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
 }

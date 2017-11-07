@@ -45,4 +45,8 @@ public interface OjekData {
 	
 	@WebMethod
 	public void hideDriverHistory(int id_history);
+	
+	@WebMethod
+	public void insertUser(String name, String username, String prof_pic, String email, String phone_number,
+			String driver_status);
 }
