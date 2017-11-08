@@ -67,7 +67,7 @@
             
         <!-- Content Field-->
         <div class="content">
-            <form name="form-edit-profile" action="edit-profile-rpc.jsp" method="POST"  onsubmit="return validateForm()">
+            <form name="form-edit-profile" action="upload" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
             <input type="hidden" name="id_user" value="<%= id_user %>">
             <table>
                 <tr>
@@ -79,9 +79,9 @@
                     <td>
                         <div class="right-side">
                             <h5> Update profile picture </h5>    
-                            <input type="file" name="fileToUpload" id="fileToUpload" hidden></input>
-							<input type="text" name="browse-field" onclick= "fileToUpload.click()"></input>
-							<input type="button" id="clickme" value="Browse.." onclick="fileToUpload.click()" />
+                           	<input type="file" name="fileToUpload" id="fileToUpload" hidden></input>
+                           	<input type="text" name="description" onClick="fileToUpload.click()"></input>
+						    <input type="button" id="clickme" value="Browse.." onClick="fileToUpload.click()"/>
                       </div>
                     </td>
                 </tr>

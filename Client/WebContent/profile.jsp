@@ -11,6 +11,8 @@
 <%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
 <%@ page import="org.java.ojekonline.webservice.MapElements" %>
 <%@ page import = "java.util.ArrayList"%>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -90,7 +92,7 @@
             <a href="edit-profile.jsp"  class="fa fa-pencil fa-2x edit-profile-icon tooltip"><span class="tooltiptext">Edit Profile</span></a>
         </div>
         <div class="img-profile">
-          <img src="img/user.png">
+          <img src="<c:url value='<%= profile.getPicture() %>'/>">
           <h3 style="margin-bottom: 5px;"> @<%= profile.getUsername() %> </h3>
           <%= profile.getFullName() %><br>
           <% String driver_status = profile.getDriver();

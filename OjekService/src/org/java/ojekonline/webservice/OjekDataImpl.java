@@ -443,12 +443,13 @@ public class OjekDataImpl implements OjekData {
 	}
 	
 	@Override
-	public void saveProfile(int id_user, String full_name, String phone_number, String driver) {
+	public void saveProfile(int id_user, String filepath, String full_name, String phone_number, String driver) {
 		try {
 			String query = 
 					" UPDATE user SET name = '" + full_name + "', "
 					+ "phone_number = '" + phone_number + "', "
-					+ "driver_status = '" + driver + "' "
+					+ "driver_status = '" + driver + "', "
+					+ "prof_pic = '" + filepath +"' "
 					+ "WHERE id_user =" + id_user + "";
 			execute(query, 2);
 			
