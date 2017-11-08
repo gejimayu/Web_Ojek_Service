@@ -23,10 +23,8 @@
 
    
     <!-- Custom CSS -->
-    <link href="style/main.css" rel="stylesheet" type='text/css'/>
-    <link href="style/profile.css" rel="stylesheet" type='text/css'/>
-    <link href="style/history.css" rel="stylesheet" type='text/css'/>
-    <link href="style/driverHistory.css" rel="stylesheet" type='text/css'/>
+    <link href="history.css" rel="stylesheet" type='text/css'/>
+    <link href="driverHistory.css" rel="stylesheet" type='text/css'/>
     <!-- Custom Fonts -->
     <link href="assets/stylesheets/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
