@@ -41,7 +41,7 @@
 		OjekData ps = service.getOjekDataImplPort();
 		
 		Babi res = new Babi();
-		res = ps.getUserHistory(10);
+		res = ps.getDriverHistory(10);
 		if (res != null){
 			Map<String, String> hasil = new HashMap<String, String>();
 			ArrayList<MapElements> temp = new ArrayList<MapElements>();
@@ -50,13 +50,13 @@
 				for (MapElements konten : temp) { 
 					hasil.put(konten.getKey(), konten.getValue());
 				} %>
-				<form method="post" action="history-penumpang-hide.jsp">
+				<form method="post" action="history-driver-hide.jsp">
 						<div class="divTabelProfile" >
 							<table class="tabelProfile">
 								<tr>
 									<td class="profilePict" >
 										<div class="containerPict">
-											<img class="pictProfile" src="<%= ps.getPicture(Integer.parseInt(hasil.get("id_driver")))%>">
+											<img class="pictProfile" src="<%= ps.getPicture(Integer.parseInt(hasil.get("id_user")))%>">
 										</div>
 									</td>
 									<td class="profileDll">

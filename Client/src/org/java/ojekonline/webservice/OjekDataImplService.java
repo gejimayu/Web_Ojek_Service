@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.2
  * 
  */
-@WebServiceClient(name = "OjekDataImplService", targetNamespace = "http://webservice.ojekonline.java.org/", wsdlLocation = "http://localhost:8082/WS/OjekData?wsdl")
+@WebServiceClient(name = "OjekDataImplService", targetNamespace = "http://webservice.ojekonline.java.org/", wsdlLocation = "http://localhost:8082/WS/OjekData?WSDL")
 public class OjekDataImplService
     extends Service
 {
@@ -30,7 +30,7 @@ public class OjekDataImplService
         URL url = null;
         WebServiceException e = null;
         try {
-            url = new URL("http://localhost:8082/WS/OjekData?wsdl");
+            url = new URL("http://localhost:8082/WS/OjekData?WSDL");
         } catch (MalformedURLException ex) {
             e = new WebServiceException(ex);
         }

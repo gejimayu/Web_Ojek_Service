@@ -45,4 +45,7 @@ public interface OjekData {
 	
 	@WebMethod
 	public void hideDriverHistory(int id_history);
+	
+	@WebMethod
+	public String getPicture(int id_user);
 }
