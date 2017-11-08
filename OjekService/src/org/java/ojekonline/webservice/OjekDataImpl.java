@@ -3,10 +3,7 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import org2.java.identity.webservice.*;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -65,6 +62,30 @@ public class OjekDataImpl implements OjekData {
 	    } 
 	}
 	
+	@Override 
+	public Babi getRatingDetail(int id_user) {
+		ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
+		try {
+			String query = "SELECT * FROM driver WHERE id_driver = " + id_user + "";
+			execute(query, 1);
+			while(rs.next()) {
+				Map<String, String> temp = new HashMap<String, String>();
+				temp.put("rating", rs.getString("avgrating"));
+				temp.put("votes", rs.getString("num_votes"));
+				smth.add(temp);
+			}
+			stmt.close();
+			conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+		
+		Babi kampret = new Babi();
+		kampret.setResults(smth);
+		
+		return kampret;
+	}
+	
 	@Override
 	public Babi findDriver(int id_user, String pick, String dest) {
 	    ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
@@ -86,8 +107,8 @@ public class OjekDataImpl implements OjekData {
 				smth.add(temp);
 			}
 			
-			 stmt.close();
-		     conn.close();
+			stmt.close();
+			conn.close();
 		} catch (SQLException e) {
 				e.printStackTrace();
 		}

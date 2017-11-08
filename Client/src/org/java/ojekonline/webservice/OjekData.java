@@ -42,6 +42,19 @@ public interface OjekData {
 
     /**
      * 
+     * @param arg0
+     * @return
+     *     returns org.java.ojekonline.webservice.Babi
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/getRatingDetailRequest", output = "http://webservice.ojekonline.java.org/OjekData/getRatingDetailResponse")
+    public Babi getRatingDetail(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
+
+    /**
+     * 
      * @param arg2
      * @param arg1
      * @param arg0

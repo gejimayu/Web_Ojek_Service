@@ -61,6 +61,7 @@
 		}
 		Profile profile = new Profile();
 		profile = ps.getProfileInfo(id_user);
+		
 	%>
 
 
@@ -97,7 +98,23 @@
           <%= profile.getFullName() %><br>
           <% String driver_status = profile.getDriver();
      	  		if(driver_status.equals("true")) {
-     	  			out.println("Driver | <i class=\"fa fa-star\" aria-hidden=\"true\" style=\"color: #ffa500;\"><strong>&nbsp;4.7</strong></i> &nbsp;(1,728 votes)");
+     	  			Babi rating = new Babi();
+     	  			rating = ps.getRatingDetail(id_user);
+     	  			Map<String, String> rating_ = new HashMap<String, String>();
+     	  			
+     	  			ArrayList<MapElements> temp_ = new ArrayList<MapElements>();
+     	  			if(rating.getResults().size() != 0) {
+     	  				for (MapElementsArray isi : rating.getResults()) {
+     	  					temp_ = (ArrayList<MapElements>) isi.getItem();
+     	  					for (MapElements konten : temp_) { 
+     	  						rating_.put(konten.getKey(), konten.getValue());
+     	  					}
+     	  					out.println("Driver | <i class=\"fa fa-star\" aria-hidden=\"true\" style=\"color: #ffa500;\"><strong>&nbsp;" + rating_.get("rating") + "</strong></i> &nbsp;(" + rating_.get("votes") + " votes)");
+     	  	    		}
+     	  			}
+     	  			else {
+     	  				out.println("Driver | <i class=\"fa fa-star\" aria-hidden=\"true\" style=\"color: #ffa500;\"><strong>&nbsp;0</strong></i> &nbsp;(0 votes)");
+     	  			}
      	  		}
      	  		else {
      	  			out.println("Non-Driver");

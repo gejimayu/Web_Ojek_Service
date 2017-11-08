@@ -11,7 +11,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" type="text/css" href="register.css">
+<link rel="stylesheet" type="text/css" href="style/register.css">
 <title>Register</title>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script>
@@ -67,7 +67,7 @@
 		//insert to SOAP DB
 		if (driverstatus == null)
 			driverstatus = "false";
-		ps.insertUser(fullname, username, "img/blank.ava.png", email, phonenumber, driverstatus);
+		ps.insertUser(fullname, username, "img/blank_ava.png", email, phonenumber, driverstatus);
 		
 		//make json object
 		JSONObject account = new JSONObject();
