@@ -2,8 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
 <%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 <%@ page import="org.java.ojekonline.webservice.OjekData" %>
 <%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
 <%@ page import="org.java.ojekonline.webservice.Babi" %>
@@ -57,9 +55,9 @@
 
 	<table id="tableactivity">
 		<tr>
-			<td id="current_activity"><a href="pickdestination.jsp">ORDER</a></td>
-			<td class="rest_activity"><a href="userHistory.jsp">HISTORY</a></td>
-			<td class="rest_activity"><a href="showprofile.jsp">MY PROFILE</a></td>
+			<td id="rest_activity"><a href="selectdestination.jsp">ORDER</a></td>
+			<td class="rest_activity"><a href="history-penumpang.jsp">HISTORY</a></td>
+			<td class="rest_activity"><a href="profile.jsp">>MY PROFILE</a></td>
 		</tr>
 	</table>
 

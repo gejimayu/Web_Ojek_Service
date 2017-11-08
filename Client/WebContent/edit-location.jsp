@@ -37,12 +37,26 @@
     <script src="javascript/edit-location.js"></script>
 </head>
 <%
-		int id_user = 1;
-	
-		OjekDataImplService service = new OjekDataImplService();
-		OjekData ps = service.getOjekDataImplPort();
-		Profile profile = new Profile();
-		profile = ps.getProfileInfo(id_user);
+int id_user = 1;
+String token = (String) session.getAttribute("token"),
+		expiry_time = (String) session.getAttribute("expiry_time");
+
+//create service object
+OjekDataImplService service = new OjekDataImplService();
+OjekData ps = service.getOjekDataImplPort();
+
+//validating token
+int result = ps.validateToken(token, expiry_time);
+if ((result == -2) || (result == -1)) {//token invalid
+	response.setStatus(response.SC_MOVED_TEMPORARILY);
+    response.setHeader("Location", "http://localhost:8080/Client/login.jsp");
+    return;
+}
+else { //token valid, get user id
+	id_user = result;
+}
+Profile profile = new Profile();
+profile = ps.getProfileInfo(id_user);
 %>
 <body>
 	<div class="container">

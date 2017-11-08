@@ -3,6 +3,10 @@ import javax.jws.WebMethod;
 import javax.jws.WebService;
 import org2.java.identity.webservice.*;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
