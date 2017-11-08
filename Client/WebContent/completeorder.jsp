@@ -10,24 +10,24 @@
 <%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
 <%@ page import="org.java.ojekonline.webservice.MapElements" %>
 <%@ page import = "java.util.ArrayList"%>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style/kepala.css">
-<link rel="stylesheet" type="text/css" href="style/selectdriver.css">
+<link rel="stylesheet" type="text/css" href="style/completeorder.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Select Driver</title>
+<title>Order</title>
+<script src="js/validateform.js"></script>
 </head>
 <body>
 	<%  
-		int userid = -1;
-	
+		int userid = 1;
 		String pick = request.getParameter("picking_point"), 
-				dest = request.getParameter("destination"), 
-				prefdriver = request.getParameter("preferred_driver"),
+				dest = request.getParameter("destination"),
 				token = (String) session.getAttribute("token"),
-				expiry_time = (String) session.getAttribute("expiry_time");	
+				expiry_time = (String) session.getAttribute("expiry_time");
+		
+		int driverid =  Integer.parseInt(request.getParameter("driverid"));
 		
 		//create service object
 		OjekDataImplService service = new OjekDataImplService();
@@ -45,7 +45,8 @@
 		}
 		
 		String nameuser = ps.getNameUser(userid);
-	%>	  
+	%>	
+	
 	<div>
 		<p id="hi_username">Hi, <b><%= nameuser %></b> !</p>
 		<h1 id="logo">
@@ -59,7 +60,7 @@
 		<tr>
 			<td id="current_activity"><a href="pickdestination.jsp">ORDER</a></td>
 			<td class="rest_activity"><a href="userHistory.jsp">HISTORY</a></td>
-			<td class="rest_activity"><a href="showprofile.jsp">MY PROFILE</a></td>
+			<td class="rest_activity"><a href="showprofile.jsp>">MY PROFILE</a></td>
 		</tr>
 	</table>
 
@@ -73,27 +74,27 @@
 	</table>
 
 	<table class="tableorder">
-		<tr id="current_order">
+		<tr>
 			<td><div class="circle">2</div></td>
 			<td class="titleorder">Select a<br>Driver</td>
 		</tr>
 	</table>
 
 	<table class="tableorder">
-		<tr>
+		<tr id="current_order">
 			<td><div class="circle">3</div></td>
 			<td class="titleorder">Complete<br>your Order</td>
 		</tr>
 	</table>
 
-	<div class="driverblock">
-		<h2 class="title_driver">PREFERRED DRIVERS:</h2>
-		<div class="chosen_driver">
-		
+	<h2 id="howwasit">HOW WAS IT?</h2>
+
+	<div id="ordercontent">
+	
 		<%
 			Babi res = new Babi();
-			System.out.println(prefdriver);
-			res = ps.findPrefDriver(userid, prefdriver);
+			System.out.println("driverid: " + driverid);
+			res = ps.getProfile(driverid, 0);
 		
 			Map<String, String> hasil = new HashMap<String, String>();
 			
@@ -102,64 +103,28 @@
 				temp = (ArrayList<MapElements>) isi.getItem();
 				for (MapElements konten : temp) { 
 					hasil.put(konten.getKey(), konten.getValue());
-				}
-				%>
-			
-				<table>
-					<tr>
-						<td><img src='<%= hasil.get("prof_pic")  %>'></td>
-						<td id='driver_identification'>
-							<span id='driver_name'><%= hasil.get("name")  %></span><br>
-							<span id='driver_rating'>☆ <%= Float.parseFloat(hasil.get("avgrating"))  %></span> 
-							(<%= hasil.get("num_votes") %> votes) <br>
-							<form action='completeorder.jsp' method='POST'>
-								<input type="hidden" name="pick" value="<%=pick%>">
-								<input type="hidden" name="dest" value="<%=dest%>">
-								<button name='driverid' value='<%=hasil.get("id_driver")%>'>I CHOOSE YOU!</button>
-							</form>
-						</td>
-					</tr>
-				</table>	
-				
-		<%	} %>
-		</div>
-	</div>
-	
-	<div class="driverblock">
-		<h2 class="title_driver">OTHER DRIVERS:</h2>
-		<div class="chosen_driver">
-		
-		<%
-			res = new Babi();
-			res = ps.findDriver(userid, pick, dest);
-	
-			hasil = new HashMap<String, String>();
-			
-			temp = new ArrayList<MapElements>();
-			for (MapElementsArray isi : res.getResults()) {
-				temp = (ArrayList<MapElements>) isi.getItem();
-				for (MapElements konten : temp) { 
-					hasil.put(konten.getKey(), konten.getValue());
 				} %>
 			
-				<table>
-					<tr>
-						<td><img src='<%= hasil.get("prof_pic")  %>'></td>
-						<td id='driver_identification'>
-							<span id='driver_name'><%= hasil.get("name")  %></span><br>
-							<span id='driver_rating'>☆ <%= Float.parseFloat(hasil.get("avgrating"))  %></span> 
-							(<%= hasil.get("num_votes") %> votes) <br>
-							<form action='completeorder.jsp' method='POST'>
-								<button name='driverid' value='<%=hasil.get("id_driver")%>'>I CHOOSE YOU!</button>
-							</form>
-						</td>
-					</tr>
-				</table>	
-				
-		<%	}
-		%>
-		
-		</div>
-	</div>	
+				<img src='<%= hasil.get("prof_pic") %>'>
+				<p id='username'>@<%= hasil.get("username") %></p>
+				<p id='name'><%= hasil.get("name") %></p>
+	
+		<%	} %>
+	
+		<form action="selectdestination.jsp" method="POST" onsubmit="return validateForm2()">
+		    <div class="rate">
+		        <input type="radio" id="star5" name="rate" value="5" /><label for="star5" title="text">5 stars</label>
+		        <input type="radio" id="star4" name="rate" value="4" /><label for="star4" title="text">4 stars</label>
+		        <input type="radio" id="star3" name="rate" value="3" /><label for="star3" title="text">3 stars</label>
+		        <input type="radio" id="star2" name="rate" value="2" /><label for="star2" title="text">2 stars</label>
+		        <input type="radio" id="star1" name="rate" value="1" /><label for="star1" title="text">1 star</label>
+		    </div>
+			<textarea id="comment" name="comment" placeholder="Your comment..."></textarea>
+			<button>Complete<br>Order</button>
+			<input type="hidden" name="pick" value="<%=pick%>">
+			<input type="hidden" name="dest" value="<%=dest%>">
+			<input type="hidden" name="driverid" value="<%=driverid%>">
+		</form>
+	</div>
 </body>
 </html>

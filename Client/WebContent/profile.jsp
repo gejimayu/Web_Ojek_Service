@@ -62,7 +62,7 @@
     <div class="header" id="header">
           <nav>
             <ul>
-              <li><a href="seldestination.jsp">ORDER</a></li>
+              <li><a href="selectdestination.jsp">ORDER</a></li>
               <li><a href="history-penumpang.jsp">HISTORY</a></li>
               <li><a href="profile.jsp" class="option-active" >MY PROFILE</a></li>
             </ul>

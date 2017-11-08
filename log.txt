@@ -1,0 +1,1243 @@
+Nov 08, 2017 1:57:11 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 1:57:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 1:57:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 1:57:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 1:57:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 1:57:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 1:57:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 1:57:12 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 1:57:12 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 1:57:12 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 1:57:12 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 1:57:12 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 1:57:12 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1765 ms
+Nov 08, 2017 1:57:12 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 1:57:12 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 1:57:18 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 1:57:22 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 1:57:22 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 1:57:22 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 1:57:22 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9982 ms
+Nov 08, 2017 2:06:55 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 08, 2017 2:06:55 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:06:55 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:06:55 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 08, 2017 2:06:55 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:06:55 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:06:55 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:06:55 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:09:57 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 2:09:57 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 2:09:57 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:09:57 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 2:09:57 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:09:57 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 2:09:57 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1521 ms
+Nov 08, 2017 2:09:57 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 2:09:57 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 2:10:02 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 2:10:07 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 2:10:07 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:10:07 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:10:07 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10033 ms
+{"expiry_time":"2017-11-08 15:28:12","token":"e59b89ec44024327a6ed5e1e0201d20e"}
+
+Nov 08, 2017 2:28:13 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [46]
+
+43: 			userid = result;
+44: 		}
+45: 		
+46: 		String nameuser = ps.getNameUser(userid);
+47: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+48: 				&& request.getParameter("driverid") != null) {
+49: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 08, 2017 2:30:29 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [46]
+
+43: 			userid = result;
+44: 		}
+45: 		
+46: 		String nameuser = ps.getNameUser(userid);
+47: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+48: 				&& request.getParameter("driverid") != null) {
+49: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 08, 2017 2:32:54 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [46]
+
+43: 			userid = result;
+44: 		}
+45: 		
+46: 		String nameuser = ps.getNameUser(userid);
+47: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+48: 				&& request.getParameter("driverid") != null) {
+49: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+{"expiry_time":"2017-11-08 15:33:28","token":"e6c7f283da8d45c8b01d02f0aaa2b33e"}
+
+{"expiry_time":"2017-11-08 15:34:44","token":"a66a5f5f078e4ebabb1c39727a351c5b"}
+
+Nov 08, 2017 2:36:13 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/register.jsp] at line [68]
+
+65: 		OjekData ps = service.getOjekDataImplPort();
+66: 		
+67: 		//insert to SOAP DB
+68: 		ps.insertUser(fullname, username, "img/blank.ava.png", email, phonenumber, driverstatus);
+69: 		
+70: 		//make json object
+71: 		JSONObject account = new JSONObject();
+
+
+Stacktrace:] with root cause
+javax.xml.ws.WebServiceException: Method Parameter: arg5 cannot be null. This is BP 1.1 R2211 violation.
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$Wrapped.buildWrapperComposite(BodyBuilder.java:179)
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$RpcLit.build(BodyBuilder.java:295)
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$JAXB.createMessage(BodyBuilder.java:88)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.createRequestPacket(StubHandler.java:217)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.serializeRequest(DatabindingImpl.java:204)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.serializeRequest(DatabindingImpl.java:69)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:91)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.insertUser(Unknown Source)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:192)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+Nov 08, 2017 2:37:10 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [46]
+
+43: 			userid = result;
+44: 		}
+45: 		
+46: 		String nameuser = ps.getNameUser(userid);
+47: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+48: 				&& request.getParameter("driverid") != null) {
+49: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+Nov 08, 2017 2:38:17 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [46]
+
+43: 			userid = result;
+44: 		}
+45: 		System.out.println(userid);
+46: 		String nameuser = ps.getNameUser(userid);
+47: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+48: 				&& request.getParameter("driverid") != null) {
+49: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:183)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+-1
+Nov 08, 2017 2:38:51 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [47]
+
+44: 			userid = result;
+45: 		}
+46: 		System.out.println(userid);
+47: 		String nameuser = ps.getNameUser(userid);
+48: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+49: 				&& request.getParameter("driverid") != null) {
+50: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:184)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+-1
+Nov 08, 2017 2:38:59 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [47]
+
+44: 			userid = result;
+45: 		}
+46: 		System.out.println(userid);
+47: 		String nameuser = ps.getNameUser(userid);
+48: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+49: 				&& request.getParameter("driverid") != null) {
+50: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:184)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+-1
+Nov 08, 2017 2:39:11 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [47]
+
+44: 			userid = result;
+45: 		}
+46: 		System.out.println(userid);
+47: 		String nameuser = ps.getNameUser(userid);
+48: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+49: 				&& request.getParameter("driverid") != null) {
+50: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:184)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+-1
+Nov 08, 2017 2:39:33 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [47]
+
+44: 			userid = result;
+45: 		}
+46: 		System.out.println(userid);
+47: 		String nameuser = ps.getNameUser(userid);
+48: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+49: 				&& request.getParameter("driverid") != null) {
+50: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:184)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+hello
+-1
+Nov 08, 2017 2:40:19 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdestination.jsp] at line [48]
+
+45: 			userid = result;
+46: 		}
+47: 		System.out.println(userid);
+48: 		String nameuser = ps.getNameUser(userid);
+49: 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
+50: 				&& request.getParameter("driverid") != null) {
+51: 			
+
+
+Stacktrace:] with root cause
+com.sun.xml.internal.ws.fault.ServerSOAPFaultException: Client received SOAP Fault from server: Method Parameter: return cannot be null. This is BP 1.1 R2211 violation. Please see the server log to find more detail regarding exact cause of the failure.
+	at com.sun.xml.internal.ws.fault.SOAP11Fault.getProtocolException(SOAP11Fault.java:178)
+	at com.sun.xml.internal.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:116)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.readResponse(StubHandler.java:238)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:189)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:276)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:104)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.getNameUser(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:185)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+-1
+hello
+b1bd0808a9974df2b73547998dde0fb5
+2017-11-08 14:44:41
+-1
+hello
+{"expiry_time":"2017-11-08 15:45:16","token":"7944e9c267684de784057f3fc7468050"}
+
+7944e9c267684de784057f3fc7468050
+2017-11-08 15:45:16
+14
+14
+Nov 08, 2017 2:49:50 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 08, 2017 2:49:50 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:49:50 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:49:50 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 08, 2017 2:49:50 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:49:50 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:49:50 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:49:50 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:51:43 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 2:51:43 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 2:51:43 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 2:51:43 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:51:44 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 2:51:44 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:51:44 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 2:51:44 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1778 ms
+Nov 08, 2017 2:51:44 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 2:51:44 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 2:51:49 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 2:51:53 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 2:51:53 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 2:51:53 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 2:51:53 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9750 ms
+{"expiry_time":"2017-11-08 15:52:05","token":"738e756fb9c24fa8b404295b3620a5c3"}
+
+738e756fb9c24fa8b404295b3620a5c3
+2017-11-08 15:52:05
+11
+11
+{"expiry_time":"2017-11-08 15:52:12","token":"730f805e4ad64485b15391a23c90cc51"}
+
+730f805e4ad64485b15391a23c90cc51
+2017-11-08 15:52:12
+14
+14
+Nov 08, 2017 3:02:15 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 08, 2017 3:02:15 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:02:15 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:02:15 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 08, 2017 3:02:15 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:02:15 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:02:15 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:02:15 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:03:31 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 3:03:31 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 3:03:31 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 3:03:32 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:03:32 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 3:03:32 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:03:32 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 3:03:32 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1557 ms
+Nov 08, 2017 3:03:32 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 3:03:32 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 3:03:37 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 3:03:42 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 3:03:42 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:03:42 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:03:42 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9480 ms
+894dfce6229c4991b88814fd3542b8fb
+2017-11-08 15:03:58
+-1
+hello
+{"expiry_time":"2017-11-08 16:04:17","token":"b09878186b0f4afd9752045ce335249b"}
+
+b09878186b0f4afd9752045ce335249b
+2017-11-08 16:04:17
+11
+11
+b09878186b0f4afd9752045ce335249b
+2017-11-08 16:04:17
+11
+11
+topan
+b09878186b0f4afd9752045ce335249b
+2017-11-08 16:04:17
+11
+11
+topan
+Nov 08, 2017 3:09:09 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 3:09:09 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 3:09:09 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:09:09 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 3:09:09 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:09:09 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 3:09:09 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1621 ms
+Nov 08, 2017 3:09:09 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 3:09:09 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 3:09:14 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 3:09:19 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 3:09:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:09:19 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:09:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9679 ms
+null
+null
+Nov 08, 2017 3:09:25 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [javax.xml.ws.WebServiceException: Method Parameter: arg1 cannot be null. This is BP 1.1 R2211 violation.] with root cause
+javax.xml.ws.WebServiceException: Method Parameter: arg1 cannot be null. This is BP 1.1 R2211 violation.
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$Wrapped.buildWrapperComposite(BodyBuilder.java:179)
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$RpcLit.build(BodyBuilder.java:295)
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$JAXB.createMessage(BodyBuilder.java:88)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.createRequestPacket(StubHandler.java:217)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.serializeRequest(DatabindingImpl.java:204)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.serializeRequest(DatabindingImpl.java:69)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:91)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.validateToken(Unknown Source)
+	at org.apache.jsp.selectdestination_jsp._jspService(selectdestination_jsp.java:175)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+{"expiry_time":"2017-11-08 16:09:42","token":"73257db891f242edba4925fe5e001cc0"}
+
+73257db891f242edba4925fe5e001cc0
+2017-11-08 16:09:42
+11
+11
+topan
+driverid: 1
+Nov 08, 2017 3:12:40 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/completeorder.jsp] at line [30]
+
+27: 				token = (String) session.getAttribute("token"),
+28: 				expiry_time = (String) session.getAttribute("expiry_time");
+29: 		
+30: 		int driverid =  Integer.parseInt(request.getParameter("driverid"));
+31: 		
+32: 		//create service object
+33: 		OjekDataImplService service = new OjekDataImplService();
+
+
+Stacktrace:] with root cause
+java.lang.NumberFormatException: null
+	at java.lang.Integer.parseInt(Integer.java:542)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at org.apache.jsp.completeorder_jsp._jspService(completeorder_jsp.java:165)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+null
+Nov 08, 2017 3:12:45 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [An exception occurred processing JSP page [/selectdriver.jsp] at line [96]
+
+93: 		<%
+94: 			Babi res = new Babi();
+95: 			System.out.println(prefdriver);
+96: 			res = ps.findPrefDriver(userid, prefdriver);
+97: 		
+98: 			Map<String, String> hasil = new HashMap<String, String>();
+99: 			
+
+
+Stacktrace:] with root cause
+javax.xml.ws.WebServiceException: Method Parameter: arg1 cannot be null. This is BP 1.1 R2211 violation.
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$Wrapped.buildWrapperComposite(BodyBuilder.java:179)
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$RpcLit.build(BodyBuilder.java:295)
+	at com.sun.xml.internal.ws.client.sei.BodyBuilder$JAXB.createMessage(BodyBuilder.java:88)
+	at com.sun.xml.internal.ws.client.sei.StubHandler.createRequestPacket(StubHandler.java:217)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.serializeRequest(DatabindingImpl.java:204)
+	at com.sun.xml.internal.ws.db.DatabindingImpl.serializeRequest(DatabindingImpl.java:69)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:91)
+	at com.sun.xml.internal.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:77)
+	at com.sun.xml.internal.ws.client.sei.SEIStub.invoke(SEIStub.java:147)
+	at com.sun.proxy.$Proxy33.findPrefDriver(Unknown Source)
+	at org.apache.jsp.selectdriver_jsp._jspService(selectdriver_jsp.java:235)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+73257db891f242edba4925fe5e001cc0
+2017-11-08 16:09:42
+11
+11
+topan
+asem : 1
+driverid: 1
+Nov 08, 2017 3:18:11 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 3:18:11 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 3:18:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:18:11 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 3:18:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:18:11 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 3:18:11 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1572 ms
+Nov 08, 2017 3:18:11 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 3:18:12 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 3:18:16 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 3:18:21 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 3:18:21 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:18:21 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:18:21 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9644 ms
+{"expiry_time":"2017-11-08 16:18:30","token":"3a3343ded2984033811de20a412a25db"}
+
+3a3343ded2984033811de20a412a25db
+2017-11-08 16:18:30
+11
+11
+topan
+driverid: 15
+3a3343ded2984033811de20a412a25db
+2017-11-08 16:18:30
+11
+11
+Nov 08, 2017 3:18:57 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 08, 2017 3:18:57 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:18:57 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:18:57 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 08, 2017 3:18:57 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:18:57 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 3:18:57 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 3:18:57 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]

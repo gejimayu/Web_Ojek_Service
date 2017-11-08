@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -10,18 +11,17 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
-
-import javax.servlet.RequestDispatcher;
 import java.sql.*;
 import com.mysql.jdbc.Statement;
-import java.util.UUID; //for generating token
+import java.util.UUID;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+
 /**
  * Servlet implementation class logout
  */
-@WebServlet("/login")
-public class login extends HttpServlet {
+@WebServlet("/register")
+public class register extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	// JDBC driver name and database URL
 	static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
@@ -34,14 +34,15 @@ public class login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		StringBuffer jb = new StringBuffer();
 		String line = null;
+		String fullname = null;
 		String username = null;
+		String email = null;
 		String password = null;
+		String phonenumber = null;
+		String driverstatus = null;
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		//get current time
-		Date date = new Date();
-		//add an hour
-		Date newDate = new Date(date.getTime() + 1 * 3600 * 1000);
-		String dateNow = dateFormat.format(newDate);
+		Date date = new Date();	
+		String dateNow = dateFormat.format(date);
 		
 		//Read body
 		try {
@@ -55,7 +56,8 @@ public class login extends HttpServlet {
 		try {
 			JSONObject jsonObject = new JSONObject(jsonData); // put "String"
 			username = jsonObject.getString("username");
-			password = jsonObject.getString("password");
+			email = jsonObject.getString("email");
+			password = jsonObject.getString("password");		
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -63,40 +65,39 @@ public class login extends HttpServlet {
 		
 		//Connect to database
 	    Statement stmt = null;
+	    Statement stmt1 = null;
 	    Connection conn = null;
-	     request.setAttribute("message", "sukses");
+	    Connection conn1 = null;
+	    request.setAttribute("message", "sukses");
 	    try {
 	    	// Register JDBC driver
 	        Class.forName("com.mysql.jdbc.Driver");
 	          
 	      	// Open a connection
-	        System.out.println("trying to connect");
 	        conn = DriverManager.getConnection(DB_URL, USER, PASS);
-	        System.out.println("successul connected to database");
 	          
 	        stmt = (Statement) conn.createStatement();
-	        String sql;
 	        
-	        //GET ID User
-	        sql = "SELECT id_user FROM userdata WHERE username = '" + username + "' and password = '" + password + "'";
-	        ResultSet rs =stmt.executeQuery(sql);
-	        if (!rs.next()) { //No 
-	        	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-	        	response.addHeader("message", "not found");
+			ResultSet rs = stmt.executeQuery("select id_user from userdata where username='"+username+"' or email='"+email+"'");
+		    if(rs.next()) {
+		    	System.out.println("Username or Email unavailable");
+		    	response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+	        	response.addHeader("message", "not valid");
 	        	return;
-	        }
-	        
-	        String id = rs.getString("id_user");
-	        
-	        // Generating token
-	        UUID uuid = UUID.randomUUID();
+		    }
+		    System.out.println("welcome "+fullname);
+	    	stmt.executeUpdate("INSERT INTO userdata (username, email, password) VALUES ('"+username+"', '"+email+"', '"+password+"')");
+	    	UUID uuid = UUID.randomUUID();
 	        String usertoken = uuid.toString().replace("-", "");
-	        
 	        // Execute Insert Query
-	        sql = "INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '"+ dateNow +"')";
-	        stmt.executeUpdate(sql);
-	        
-	        //send token and expiry time
+	        rs = stmt.executeQuery("SELECT id_user FROM userdata WHERE username = '" + username + "'");
+	        if (rs.next()) {
+	        	int id = rs.getInt("id_user");
+	        	System.out.println("insert token");
+	        	stmt.executeUpdate("INSERT INTO accesstoken VALUES (" + id + ",'" + usertoken + "', '" + dateNow + "')");
+	        	//stmt1.executeUpdate("INSERT INTO driver VALUES (" + id + ", 0, 0)");
+		        //out.println("insert database driver");
+	        }
 	        PrintWriter out = response.getWriter();
 	        response.setContentType("application/json");
 	        response.setCharacterEncoding("utf-8");
