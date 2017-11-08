@@ -42,6 +42,32 @@
 		
 		Babi res = new Babi();
 		res = ps.getDriverHistory(10);
+		%>
+		<div>
+		<p id="hi_username">Hi, <b> USERNAME</b> !</p>
+		<h1 id="logo">
+			<span id="labelgreen">PR</span>-<span id="labelred">OJEK</span>
+		</h1>
+		<a id="logout" href="logout.jsp">Logout</a>
+		<p id="extralogo">wush... wush... ngeeeeenggg...</p>
+		</div>
+		
+		<table id="tableactivity">
+		<tr>
+			<td class="rest_activity"><a href="pickdestination.jsp">ORDER</a></td>
+			<td id="current_activity"><a href="history-penumpang.jsp">HISTORY</a></td>
+			<td class="rest_activity"><a href="profile.jsp">MY PROFILE</a></td>
+		</tr>
+		</table>
+		<br>
+		<table id="tableactivity">
+		<tr>
+			<td class="rest_activity"><a href="history-penumpang.jsp">PREVIOUS ORDER</a></td>
+			<td id="current_activity"><a href="history-driver.jsp">DRIVER HISTORY</a></td>
+		</tr>
+		</table>
+		<br>
+		<%
 		if (res != null){
 			Map<String, String> hasil = new HashMap<String, String>();
 			ArrayList<MapElements> temp = new ArrayList<MapElements>();
