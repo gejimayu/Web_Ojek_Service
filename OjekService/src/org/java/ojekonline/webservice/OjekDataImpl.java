@@ -1,5 +1,6 @@
 package org.java.ojekonline.webservice;
 import javax.jws.WebService;
+import org2.java.identity.webservice.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,8 +22,10 @@ public class OjekDataImpl implements OjekData{
     ResultSet rs = null;
 		
 	@Override
-	public Boolean validateToken(String token) {
-		return true;
+	public int validateToken(String token, String expiry_time) {
+		TokenControllerImplService service = new TokenControllerImplService();
+		TokenController ps = service.getTokenControllerImplPort();
+		return ps.validateToken(token, expiry_time);
 	}
 	
 	void execute(String query, int code) {
@@ -114,9 +117,9 @@ public class OjekDataImpl implements OjekData{
 		try {
 			String query = 
 					"SELECT DISTINCT name, prof_pic, avgrating, "
-					+ "id_driver, num_votes FROM driver "
-					+ "join user WHERE id_user <> "+ Integer.toString(id_user) +" AND id_user = id_driver AND" + 
-					" name = '" + name + "'";
+					+ "id_driver, num_votes FROM driver join "
+					+ " user WHERE id_user <> "+ Integer.toString(id_user) +" AND name =  "
+							+ "'"+ name + "' AND id_driver = id_user";
 			execute(query, 1);
 			if (rs.next()) {
 				System.out.println(rs.getString("name"));
@@ -351,6 +354,17 @@ public class OjekDataImpl implements OjekData{
 					+ "'" + email + "', '" + phone_number + "', '"+ driver_status +"')" ;
 			
 			execute(query, 2);
+			
+			query = "SELECT * from user WHERE username = '" + username + "'";
+			
+			execute(query, 1);
+			
+			if (rs.next()) {
+				int id = rs.getInt("id_user");
+				query = "INSERT INTO driver(id_driver, avgrating, num_votes) "
+						+ "VALUES (" + Integer.toString(id) + ", 0, 0)";
+				execute(query, 2);
+			}
 			
 			 stmt.close();
 		     conn.close();

@@ -36,7 +36,7 @@ public class login extends HttpServlet {
 		String line = null;
 		String username = null;
 		String password = null;
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		//get current time
 		Date date = new Date();
 		//add an hour

@@ -40,7 +40,7 @@ public class register extends HttpServlet {
 		String password = null;
 		String phonenumber = null;
 		String driverstatus = null;
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		Date date = new Date();	
 		String dateNow = dateFormat.format(date);
 		

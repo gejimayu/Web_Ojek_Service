@@ -26,26 +26,19 @@ public interface OjekData {
 
     /**
      * 
-     * @param arg0
-     */
-    @WebMethod
-    @Action(input = "http://webservice.ojekonline.java.org/OjekData/hideDriverHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/hideDriverHistoryResponse")
-    public void hideDriverHistory(
-        @WebParam(name = "arg0", partName = "arg0")
-        int arg0);
-
-    /**
-     * 
+     * @param arg1
      * @param arg0
      * @return
-     *     returns boolean
+     *     returns int
      */
     @WebMethod
     @WebResult(partName = "return")
     @Action(input = "http://webservice.ojekonline.java.org/OjekData/validateTokenRequest", output = "http://webservice.ojekonline.java.org/OjekData/validateTokenResponse")
-    public boolean validateToken(
+    public int validateToken(
         @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
 
     /**
      * 
@@ -255,5 +248,15 @@ public interface OjekData {
         String arg4,
         @WebParam(name = "arg5", partName = "arg5")
         String arg5);
+
+    /**
+     * 
+     * @param arg0
+     */
+    @WebMethod
+    @Action(input = "http://webservice.ojekonline.java.org/OjekData/hideDriverHistoryRequest", output = "http://webservice.ojekonline.java.org/OjekData/hideDriverHistoryResponse")
+    public void hideDriverHistory(
+        @WebParam(name = "arg0", partName = "arg0")
+        int arg0);
 
 }

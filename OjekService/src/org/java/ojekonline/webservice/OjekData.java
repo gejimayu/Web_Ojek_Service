@@ -10,7 +10,7 @@ import javax.xml.ws.RequestWrapper;
 public interface OjekData {
 	
 	@WebMethod
-	public Boolean validateToken(String token);
+	public int validateToken(String token, String expiry_time);
 	
 	@WebMethod
 	public Babi findDriver(int id_user, String pick, String dest);

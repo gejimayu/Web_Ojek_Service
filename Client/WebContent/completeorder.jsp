@@ -23,11 +23,26 @@
 	<%  
 		int userid = 1;
 		String pick = request.getParameter("picking_point"), 
-				dest = request.getParameter("destination");
+				dest = request.getParameter("destination"),
+				token = (String) session.getAttribute("token"),
+				expiry_time = (String) session.getAttribute("expiry_time");
+		
 		int driverid =  Integer.parseInt(request.getParameter("driverid"));
 		
+		//create service object
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
+		
+		//validating token
+		int result = ps.validateToken(token, expiry_time);
+		if ((result == -2) || (result == -1)) {//token invalid
+			response.setStatus(response.SC_MOVED_TEMPORARILY);
+		    response.setHeader("Location", "http://localhost:8080/Client/login.jsp");
+		    return;
+		}
+		else { //token valid, get user id
+			userid = result;
+		}
 		
 		String nameuser = ps.getNameUser(userid);
 	%>	
@@ -78,6 +93,7 @@
 	
 		<%
 			Babi res = new Babi();
+			System.out.println("driverid: " + driverid);
 			res = ps.getProfile(driverid, 0);
 		
 			Map<String, String> hasil = new HashMap<String, String>();

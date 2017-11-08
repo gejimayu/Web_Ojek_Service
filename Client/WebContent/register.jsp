@@ -65,6 +65,8 @@
 		OjekData ps = service.getOjekDataImplPort();
 		
 		//insert to SOAP DB
+		if (driverstatus == null)
+			driverstatus = "false";
 		ps.insertUser(fullname, username, "img/blank.ava.png", email, phonenumber, driverstatus);
 		
 		//make json object
@@ -132,7 +134,7 @@
 				<tr><td>Phone Number</td><td colspan="2"><input id="phonenumber" name="phonenumber" type="text" maxlength="12"/></td></tr>
 				<tr><td colspan="3"><input id="driverstatus" type="checkbox" name="driverstatus" value="true"/>Also sign me up as a driver!</td></tr>
 				<tr><td colspan="3" height="10"></td></tr>			
-				<tr><td><a href=login.php>Already have an account?</a></td>
+				<tr><td><a href=login.jsp>Already have an account?</a></td>
 				<td align="right" colspan="2"><input type='submit' value="REGISTER"></td></tr>
 			</table>
 		</form>

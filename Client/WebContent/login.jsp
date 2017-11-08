@@ -93,7 +93,7 @@
   	 		</div>
   	 	</div>
    		<div class="submit-form"> 
-   			<p class="no-acc"><a href="register.php"> Don't have an account?</a></p>
+   			<p class="no-acc"><a href="register.jsp"> Don't have an account?</a></p>
    			<input type="submit" value="GO!" onclick=" return submitForm(this,event)">
    		</div>
     </form>

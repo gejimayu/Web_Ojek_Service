@@ -22,12 +22,31 @@
 <script src="js/validateform.js"></script>
 </head>
 <body>
-	
 	<%
-		int userid = 1;
+		int userid = -1;
+		
+		//create service object
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
 		
+		//get token from session
+		String token = (String) session.getAttribute("token");
+		String expiry_time = (String) session.getAttribute("expiry_time");
+		System.out.println(token);
+		System.out.println(expiry_time);
+		//validating token
+		int result = ps.validateToken(token, expiry_time);
+		System.out.println(result);
+		if ((result == -2) || (result == -1)) {//token invalid
+			System.out.println("hello");
+			response.setStatus(response.SC_MOVED_TEMPORARILY);
+		    response.setHeader("Location", "http://localhost:8080/Client/login.jsp");
+		    return;
+		}
+		else { //token valid, get user id
+			userid = result;
+		}
+		System.out.println(userid);
 		String nameuser = ps.getNameUser(userid);
 		if (request.getParameter("pick") != null && request.getParameter("dest") != null 
 				&& request.getParameter("driverid") != null) {
@@ -38,7 +57,7 @@
 			String dest = (String) request.getParameter("dest");
 			int rate = Integer.parseInt(request.getParameter("rate"));
 			String comment = request.getParameter("comment");
-			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 			Date date = new Date();	
 			String dateNow = dateFormat.format(date);
 			String drivername = ps.getNameUser(driverid);
