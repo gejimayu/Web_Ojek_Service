@@ -76,7 +76,7 @@
             <a href="edit-profile.jsp"  class="fa fa-pencil fa-2x edit-profile-icon tooltip"><span class="tooltiptext">Edit Profile</span></a>
         </div>
         <div class="img-profile">
-          <img src="#imageprofile">
+          <img src="img/user.png">
           <h3 style="margin-bottom: 5px;"> @<%= profile.getUsername() %> </h3>
           <%= profile.getFullName() %><br>
           <% String driver_status = profile.getDriver();
