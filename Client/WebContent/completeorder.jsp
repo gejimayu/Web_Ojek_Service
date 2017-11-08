@@ -20,8 +20,8 @@
 <body>
 	<%  
 		int userid = 1;
-		String pick = request.getParameter("picking_point"), 
-				dest = request.getParameter("destination"),
+		String pick = request.getParameter("pick"), 
+				dest = request.getParameter("dest"),
 				token = (String) session.getAttribute("token"),
 				expiry_time = (String) session.getAttribute("expiry_time");
 		

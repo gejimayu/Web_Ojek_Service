@@ -23,12 +23,9 @@
 
    
     <!-- Custom CSS -->
-    <link href="style/main.css" rel="stylesheet" type='text/css'/>
-    <link href="style/profile.css" rel="stylesheet" type='text/css'/>
-    <link href="style/history.css" rel="stylesheet" type='text/css'/>
-    <link href="style/driverHistory.css" rel="stylesheet" type='text/css'/>
+    <link href="history.css" rel="stylesheet" type='text/css'/>
+    <link href="driverHistory.css" rel="stylesheet" type='text/css'/>
     <!-- Custom Fonts -->
-    <link href="assets/stylesheets/font-awesome.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
@@ -76,21 +73,21 @@
 		
 		<table id="tableactivity">
 		<tr>
-			<td class="rest_activity"><a href="pickdestination.jsp">ORDER</a></td>
-			<td id="current_activity"><a href="history-penumpang.jsp">HISTORY</a></td>
+			<td class="rest_activity"><a href="selectdestination.jsp">ORDER</a></td>
+			<td id="current_activity"><a href="#">HISTORY</a></td>
 			<td class="rest_activity"><a href="profile.jsp">MY PROFILE</a></td>
 		</tr>
 		</table>
-		<br>
+		<p id="transactionHistory" >TRANSACTION HISTORY</p>
 		<table id="tableactivity">
 		<tr>
 			<td class="rest_activity"><a href="history-penumpang.jsp">PREVIOUS ORDER</a></td>
-			<td id="current_activity"><a href="history-driver.jsp">DRIVER HISTORY</a></td>
+			<td id="current_activity"><a href="#">DRIVER HISTORY</a></td>
 		</tr>
 		</table>
 		<br>
 		<%
-		if (res != null){
+		if (res.getResults().size() != 0){
 			Map<String, String> hasil = new HashMap<String, String>();
 			ArrayList<MapElements> temp = new ArrayList<MapElements>();
 			for (MapElementsArray isi : res.getResults()) {
@@ -138,7 +135,7 @@
 		}
 		else {
 			%>
-			<center>No History</center><%
+			<center>Nothing to display</center><%
 		}	
 	%>
 </body>

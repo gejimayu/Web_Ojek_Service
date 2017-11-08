@@ -55,9 +55,9 @@
 
 	<table id="tableactivity">
 		<tr>
-			<td id="rest_activity"><a href="selectdestination.jsp">ORDER</a></td>
+			<td id="current_activity"><a href="selectdestination.jsp">ORDER</a></td>
 			<td class="rest_activity"><a href="history-penumpang.jsp">HISTORY</a></td>
-			<td class="rest_activity"><a href="profile.jsp">>MY PROFILE</a></td>
+			<td class="rest_activity"><a href="profile.jsp">MY PROFILE</a></td>
 		</tr>
 	</table>
 
