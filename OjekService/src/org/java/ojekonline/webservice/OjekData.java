@@ -31,4 +31,7 @@ public interface OjekData {
 	
 	@WebMethod
 	public void saveLocation(int id_driver, String old_loc, String new_loc);
+	
+	@WebMethod
+	public void saveProfile(int id_user, String full_name, String phone_number, String driver);
 }

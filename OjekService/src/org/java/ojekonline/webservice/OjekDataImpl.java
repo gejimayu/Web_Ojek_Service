@@ -183,4 +183,21 @@ public class OjekDataImpl implements OjekData {
 				e.printStackTrace();
 		}
 	}
+	
+	@Override
+	public void saveProfile(int id_user, String full_name, String phone_number, String driver) {
+		try {
+			String query = 
+					" UPDATE user SET name = '" + full_name + "', "
+					+ "phone_number = '" + phone_number + "', "
+					+ "driver_status = '" + driver + "' "
+					+ "WHERE id_user =" + id_user + "";
+			execute(query, 2);
+			
+			stmt.close();
+		    conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}	
+	}
 }

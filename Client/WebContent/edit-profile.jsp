@@ -1,5 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="javax.xml.namespace.QName" %>
+<%@ page import="javax.xml.ws.Service" %>
+<%@ page import="java.net.URL" %>
+<%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import="org.java.ojekonline.webservice.OjekData" %>
+<%@ page import="org.java.ojekonline.webservice.OjekDataImplService" %>
+<%@ page import="org.java.ojekonline.webservice.Profile" %>
+<%@ page import="org.java.ojekonline.webservice.Babi" %>
+<%@ page import="org.java.ojekonline.webservice.MapElementsArray" %>
+<%@ page import="org.java.ojekonline.webservice.MapElements" %>
+<%@ page import = "java.util.ArrayList"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -25,6 +36,14 @@
     <script src="javascript/edit-profile.js"></script>
 </head>
 <body>
+	<%
+		int id_user = 1;
+	
+		OjekDataImplService service = new OjekDataImplService();
+		OjekData ps = service.getOjekDataImplPort();
+		Profile profile = new Profile();
+		profile = ps.getProfileInfo(id_user);
+	%>
     <div class="container">
         <!-- Header Section -->
         <div class="profile-header">
@@ -33,13 +52,13 @@
             
         <!-- Content Field-->
         <div class="content">
-            <form name="form-edit-profile" action="../src/edit-profile.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
-            <input type="hidden" name="username" value="<?php echo $username ?>">
+            <form name="form-edit-profile" action="edit-profile-rpc.jsp" method="POST"  onsubmit="return validateForm()">
+            <input type="hidden" name="id_user" value="<%= id_user %>">
             <table>
                 <tr>
                     <td>
                         <div class="img-profile">
-                            <img src="<?php echo getImageProfile($con, $username); ?>" alt="User Picture" width="200" height="200">
+                            <img src="<%= profile.getPicture() %>" alt="User Picture" width="200" height="200">
                         </div>
                     </td>
                     <td>
@@ -53,13 +72,13 @@
                 </tr>
                 <tr>
                     <td>Your Name</td>
-                    <td><input id="name" type="text" class="right-side-box" name="name" value="<?php echo getNameUser($con, $username); ?>"></td>
+                    <td><input id="name" type="text" class="right-side-box" name="name" value="<%= profile.getFullName() %>"></td>
                 </tr>
                 
                 <tr>
                     <td>Phone</td>
                     <td>
-                        <input id="phone" type="text" class="right-side-box" name="phone" value="<?php echo getPhoneUser($con, $username); ?>" onkeypress='return onlyNumber(event)'>
+                        <input id="phone" type="text" class="right-side-box" name="phone" value="<%= profile.getPhoneNumber() %>" onkeypress='return onlyNumber(event)'>
                     </td>
                 </tr>
                 
@@ -76,13 +95,22 @@
                 </table>
         </div>
         <br><br>
-        <button class="btn-back"><a href="profile.php?user=<?php echo $username ?>"> BACK </a></button>
+        <button class="btn-back"><a href="profile.jsp"> BACK </a></button>
         <button class="btn-save" type="submit" name="submit">SAVE</button>
         </form>
-        
+        <%
+        String driver_status = profile.getDriver();
+  		if(driver_status.equals("true")) {
+  			out.println("<script>" 
+  						+ "document.getElementById('isDriver').checked = true; "
+  						+ "</script>");
+  		}
+  		else {
+  			out.println("<script>" 
+						+ "document.getElementById('isDriver').checked = false; "
+						+ "</script>");
+  		}
+	  	%>
     </div>
-    <?php   echo isDriver($con, $username); 
-            mysqli_close($con);
-    ?>
 </body>
 </html>
