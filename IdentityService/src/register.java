@@ -41,8 +41,11 @@ public class register extends HttpServlet {
 		String phonenumber = null;
 		String driverstatus = null;
 		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		Date date = new Date();	
-		String dateNow = dateFormat.format(date);
+		//get current time
+		Date date = new Date();
+		//add an hour
+		Date newDate = new Date(date.getTime() + 1 * 3600 * 1000);
+		String dateNow = dateFormat.format(newDate);
 		
 		//Read body
 		try {

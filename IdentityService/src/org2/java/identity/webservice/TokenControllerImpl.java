@@ -68,8 +68,8 @@ public class TokenControllerImpl implements TokenController{
 		execute(query);
 		try {
 			if (rs.next()) { //token validated
-				System.out.println(dateFormat.format(dateNow));
-				System.out.println(dateFormat.format(expirydate));
+				System.out.println("Compared datenow : " + dateFormat.format(dateNow));
+				System.out.println("Compared expirydate : " + dateFormat.format(expirydate));
 				if (dateNow.after(expirydate)) { //token expired
 					result = -1;
 				}
@@ -84,6 +84,7 @@ public class TokenControllerImpl implements TokenController{
 	        conn.close();
 		} catch (SQLException e) {
 		} 
+		System.out.println("Comparison result : " + result);
 		return result;
 	}
 

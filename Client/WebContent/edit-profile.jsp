@@ -85,6 +85,7 @@
                       </div>
                     </td>
                 </tr>
+                <input name="filePath" type="text" value="<%=profile.getPicture()%>" hidden/>
                 <tr>
                     <td>Your Name</td>
                     <td><input id="name" type="text" class="right-side-box" name="name" value="<%= profile.getFullName() %>"></td>

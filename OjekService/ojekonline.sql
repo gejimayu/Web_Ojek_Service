@@ -25,7 +25,7 @@ VALUES 	("Pika1", "pikapika", "img/pika1.png", "cobacoba@gmail.com", "0857232899
 		("Pika6", "pikapika6", "img/naruto3.jpg", "cobacoba6@gmail.com", "08239293929", "true"),
 		("Pika7", "pikapika7", "img/oro.png", "cobacoba7@gmail.com", "085723289999", "false"),
 		("Pika8", "pikapika8", "img/sasuke.png", "cobacoba8@gmail.com", "085723289999", "false"),
-		("kuning", "pika", "img/blank.ava.png", "tes@asd.ib", "123412341234", "true"),
+		("kuning", "pika", "img/blank_ava.png", "tes@asd.ib", "123412341234", "true"),
 		("asem", "pikalol", "img/220688.jpg", "asd@gmx.s", "12341234", "true");
 
 CREATE TABLE driver (

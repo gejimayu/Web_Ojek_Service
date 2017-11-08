@@ -26,7 +26,7 @@
 		//create service object
 		OjekDataImplService service = new OjekDataImplService();
 		OjekData ps = service.getOjekDataImplPort();
-		
+		session.setAttribute("visit", "not first");
 		//get token from session
 		String token = (String) session.getAttribute("token");
 		String expiry_time = (String) session.getAttribute("expiry_time");
@@ -36,7 +36,7 @@
 		int result = ps.validateToken(token, expiry_time);
 		System.out.println(result);
 		if ((result == -2) || (result == -1)) {//token invalid
-			System.out.println("hello");
+			System.out.println("hello " + result);
 			response.setStatus(response.SC_MOVED_TEMPORARILY);
 		    response.setHeader("Location", "http://localhost:8080/Client/login.jsp");
 		    return;

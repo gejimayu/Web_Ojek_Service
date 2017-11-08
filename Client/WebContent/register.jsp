@@ -110,9 +110,11 @@
 			//redirect
 	        response.setStatus(response.SC_MOVED_TEMPORARILY);
 	        if (driverstatus.equals("true")) {
+	        	System.out.println("redirect profile");
 				response.setHeader("Location", "http://localhost:8080/Client/profile.jsp");
 	        }
 	        else {
+	        	System.out.println("redirect destination");
 	        	response.setHeader("Location", "http://localhost:8080/Client/selectdestination.jsp");
 	        }
 		} else {

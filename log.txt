@@ -4267,3 +4267,1206 @@ Nov 08, 2017 10:50:06 PM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["http-nio-8080"]
 Nov 08, 2017 10:50:06 PM org.apache.coyote.AbstractProtocol destroy
 INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 11:32:47 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 08, 2017 11:32:47 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 08, 2017 11:32:47 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 08, 2017 11:32:47 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 11:32:48 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 11:32:48 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 11:32:48 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 08, 2017 11:32:48 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2053 ms
+Nov 08, 2017 11:32:48 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 08, 2017 11:32:48 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 08, 2017 11:32:54 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 11:33:01 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 08, 2017 11:33:02 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 08, 2017 11:33:02 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 08, 2017 11:33:02 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 14013 ms
+{"expiry_time":"2017-11-09 00:33:39","token":"874c1094c0c84615b65d10962ab22d57"}
+
+874c1094c0c84615b65d10962ab22d57
+2017-11-09 00:33:39
+11
+11
+redirect destination
+046a6348f20340f8a3931b01931a426b
+2017-11-08 23:33:58
+-1
+hello -1
+redirect destination
+7ca25edf5aff4e1e9a1c85f119e2f27c
+2017-11-08 23:35:16
+-1
+hello -1
+{"expiry_time":"2017-11-09 00:35:19","token":"eaf1868984d8461aba183a39a0e011ca"}
+
+eaf1868984d8461aba183a39a0e011ca
+2017-11-09 00:35:19
+13
+13
+Nov 13, 2017 7:26:05 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 7:26:05 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 7:26:05 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 7:26:06 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:26:06 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:26:06 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:26:06 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:26:06 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2115 ms
+Nov 13, 2017 7:26:07 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 7:26:07 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 7:26:12 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:26:18 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:26:18 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:26:18 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:26:18 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 11966 ms
+redirect profile
+Nov 13, 2017 7:32:21 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 7:32:21 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:32:22 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:32:22 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 7:32:22 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:32:22 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:32:22 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:32:22 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:34:15 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 7:34:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 7:34:15 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 7:34:15 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:34:16 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:34:16 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:34:16 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:34:16 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1833 ms
+Nov 13, 2017 7:34:16 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 7:34:16 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 7:34:21 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:34:26 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:34:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:34:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:34:26 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10181 ms
+redirect profile
+Nov 13, 2017 7:35:34 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 7:35:34 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:35:34 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:35:34 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 7:35:34 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:35:34 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:35:34 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:35:34 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:36:10 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 7:36:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 7:36:10 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 7:36:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:36:11 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:36:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:36:11 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:36:11 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1648 ms
+Nov 13, 2017 7:36:11 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 7:36:11 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 7:36:15 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:36:20 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:36:20 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:36:20 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:36:20 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9278 ms
+Nov 13, 2017 7:36:35 PM org.apache.catalina.core.StandardWrapperValve invoke
+SEVERE: Servlet.service() for servlet [jsp] in context with path [/Client] threw exception [javax.xml.ws.WebServiceException: Failed to access the WSDL at: http://localhost:8082/WS/OjekData?wsdl. It failed with: 
+	Connection refused: connect.] with root cause
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:211)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:308)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:326)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1202)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1138)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:966)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.URL.openStream(URL.java:1045)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:984)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:385)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:216)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:194)
+	at com.sun.xml.internal.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:163)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:348)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:306)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:215)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:196)
+	at com.sun.xml.internal.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:192)
+	at com.sun.xml.internal.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:104)
+	at javax.xml.ws.Service.<init>(Service.java:77)
+	at org.java.ojekonline.webservice.OjekDataImplService.<init>(OjekDataImplService.java:42)
+	at org.apache.jsp.register_jsp._jspService(register_jsp.java:188)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:443)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:742)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:478)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+redirect destination
+0bfb51f7936346bbbde4505cef6c8df3
+2017-11-13 20:37:08
+16
+16
+0bfb51f7936346bbbde4505cef6c8df3
+2017-11-13 20:37:08
+16
+0bfb51f7936346bbbde4505cef6c8df3
+2017-11-13 20:37:08
+16
+16
+0bfb51f7936346bbbde4505cef6c8df3
+2017-11-13 20:37:08
+16
+0bfb51f7936346bbbde4505cef6c8df3
+2017-11-13 20:37:08
+16
+0bfb51f7936346bbbde4505cef6c8df3
+2017-11-13 20:37:08
+16
+16
+{"expiry_time":"2017-11-13 20:37:43","token":"486b099b9f18433088936fc8bc5e72c9"}
+
+486b099b9f18433088936fc8bc5e72c9
+2017-11-13 20:37:43
+16
+16
+redirect profile
+Nov 13, 2017 7:48:37 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] has started
+Nov 13, 2017 7:48:41 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:48:41 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] is completed
+Nov 13, 2017 7:48:48 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 7:48:48 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:48:48 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:48:48 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 7:48:48 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:48:48 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:48:48 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:48:48 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:49:07 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 7:49:07 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 7:49:07 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 7:49:07 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:49:08 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:49:08 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:49:08 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:49:08 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1665 ms
+Nov 13, 2017 7:49:08 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 7:49:08 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 7:49:13 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:49:18 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:49:18 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:49:18 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:49:18 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10222 ms
+image path : null
+{"expiry_time":"2017-11-13 20:50:17","token":"21ee6e8b1be24a2598f1cd32ceccb8b1"}
+
+21ee6e8b1be24a2598f1cd32ceccb8b1
+2017-11-13 20:50:17
+14
+14
+Nov 13, 2017 7:56:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] has started
+Nov 13, 2017 7:56:55 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:56:55 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] is completed
+Nov 13, 2017 7:56:59 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 7:56:59 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:56:59 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:57:00 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 7:57:00 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:57:00 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:57:00 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:57:00 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:57:03 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 7:57:03 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 7:57:03 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 7:57:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:57:04 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:57:04 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:57:04 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 7:57:04 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1680 ms
+Nov 13, 2017 7:57:04 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 7:57:04 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 7:57:09 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:57:14 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 7:57:14 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 7:57:14 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 7:57:14 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9766 ms
+{"expiry_time":"2017-11-13 20:57:23","token":"3535027f2ea842ec9805924c50f494db"}
+
+3535027f2ea842ec9805924c50f494db
+2017-11-13 20:57:23
+14
+14
+image path : img/blank_ava.png
+image path : img/
+image path : img/4.JPG
+Nov 13, 2017 8:00:56 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] has started
+Nov 13, 2017 8:01:01 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:01:01 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] is completed
+Nov 13, 2017 8:01:02 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:01:02 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:01:03 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:01:03 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:01:03 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:01:03 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:01:03 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:01:03 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:02:26 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 8:02:26 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 8:02:26 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 8:02:27 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:02:27 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:02:27 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:02:27 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:02:27 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1662 ms
+Nov 13, 2017 8:02:27 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 8:02:27 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 8:02:32 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:02:37 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:02:37 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:02:37 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:02:37 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9492 ms
+{"expiry_time":"2017-11-13 21:02:58","token":"6ecca6d656994ec78b76045decac9f96"}
+
+6ecca6d656994ec78b76045decac9f96
+2017-11-13 21:02:58
+16
+16
+{"expiry_time":"2017-11-13 21:03:10","token":"ec3985d5c03e4d3fb96ae8b1a192b2dd"}
+
+ec3985d5c03e4d3fb96ae8b1a192b2dd
+2017-11-13 21:03:10
+2
+2
+image path : img/pika2.png
+Nov 13, 2017 8:04:18 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] has started
+Nov 13, 2017 8:04:21 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:04:21 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] is completed
+Nov 13, 2017 8:04:22 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:04:22 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:04:22 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:04:22 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:04:22 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:04:22 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:04:22 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:04:22 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:05:10 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 8:05:10 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 8:05:10 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 8:05:10 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:05:11 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:05:11 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:05:11 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:05:11 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2048 ms
+Nov 13, 2017 8:05:11 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 8:05:11 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 8:05:16 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:05:21 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:05:21 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:05:21 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:05:21 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10223 ms
+{"expiry_time":"2017-11-13 21:05:29","token":"cbcffac295544f37b01b59efca752cb7"}
+
+cbcffac295544f37b01b59efca752cb7
+2017-11-13 21:05:29
+2
+2
+{"expiry_time":"2017-11-13 21:05:40","token":"836b1f412b4749c098e159e5442e201e"}
+
+836b1f412b4749c098e159e5442e201e
+2017-11-13 21:05:40
+4
+4
+image path : img/naruto1.png
+{"expiry_time":"2017-11-13 21:06:15","token":"e66edd616ea6441a9e4508328f448e86"}
+
+e66edd616ea6441a9e4508328f448e86
+2017-11-13 21:06:15
+3
+3
+image path : img/kakashi.png
+Nov 13, 2017 8:07:32 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] has started
+Nov 13, 2017 8:07:34 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:07:34 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:07:35 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:07:36 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:07:38 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:07:38 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] is completed
+Nov 13, 2017 8:07:38 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:07:38 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:07:38 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:07:38 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:07:41 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 8:07:41 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 8:07:41 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 8:07:42 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:07:42 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:07:42 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:07:42 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:07:42 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1703 ms
+Nov 13, 2017 8:07:42 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 8:07:42 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 8:07:47 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:07:52 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:07:52 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:07:52 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:07:52 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10113 ms
+{"expiry_time":"2017-11-13 21:07:59","token":"68a0ad84d26f4e29b06604c83e8abefa"}
+
+68a0ad84d26f4e29b06604c83e8abefa
+2017-11-13 21:07:59
+5
+5
+image path : img/naruto2.jpg
+Nov 13, 2017 8:08:51 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:08:51 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:08:52 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:08:52 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:08:52 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:08:52 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:08:52 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:08:52 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:08:55 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 8:08:55 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 8:08:55 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 8:08:56 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:08:56 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:08:56 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:08:56 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:08:56 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1601 ms
+Nov 13, 2017 8:08:56 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 8:08:56 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 8:09:01 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:09:06 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:09:06 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:09:06 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:09:06 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9885 ms
+{"expiry_time":"2017-11-13 21:09:13","token":"71d40d03c3814fee95da15a363145f4b"}
+
+71d40d03c3814fee95da15a363145f4b
+2017-11-13 21:09:13
+6
+6
+image path : img/naruto3.jpg
+Nov 13, 2017 8:10:47 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] has started
+Nov 13, 2017 8:10:51 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:10:51 PM org.apache.catalina.core.StandardContext reload
+INFO: Reloading Context with name [/Client] is completed
+Nov 13, 2017 8:10:56 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:10:56 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:10:56 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:10:57 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:10:57 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:10:57 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:10:57 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:10:57 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:11:02 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 8:11:02 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 8:11:02 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 8:11:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:11:03 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:11:03 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:11:03 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:11:03 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1602 ms
+Nov 13, 2017 8:11:03 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 8:11:03 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 8:11:08 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:11:13 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:11:13 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:11:13 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:11:13 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9656 ms
+{"expiry_time":"2017-11-13 21:11:20","token":"27d145a5a306494c96ab309a52983da4"}
+
+27d145a5a306494c96ab309a52983da4
+2017-11-13 21:11:20
+7
+7
+{"expiry_time":"2017-11-13 21:11:39","token":"7943a99e392b48b59391c2d5dbdd08e9"}
+
+7943a99e392b48b59391c2d5dbdd08e9
+2017-11-13 21:11:39
+8
+8
+{"expiry_time":"2017-11-13 21:12:00","token":"4ca85373b18f42b5b1c37ffca06710c3"}
+
+4ca85373b18f42b5b1c37ffca06710c3
+2017-11-13 21:12:00
+9
+9
+4ca85373b18f42b5b1c37ffca06710c3
+2017-11-13 21:12:00
+9
+4ca85373b18f42b5b1c37ffca06710c3
+2017-11-13 21:12:00
+9
+{"expiry_time":"2017-11-13 21:12:58","token":"45c72016f9b844a28b115669e50ae972"}
+
+45c72016f9b844a28b115669e50ae972
+2017-11-13 21:12:58
+1
+1
+image path : img/pika1.png
+panjang : 0
+Nov 13, 2017 8:13:53 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:13:53 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:13:54 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:13:54 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:13:54 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:13:54 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:13:54 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:13:54 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:15:15 PM org.apache.tomcat.util.digester.SetPropertiesRule begin
+WARNING: [SetPropertiesRule]{Server/Service/Engine/Host/Context} Setting property 'source' to 'org.eclipse.jst.jee.server:Client' did not find a matching property.
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server version:        Apache Tomcat/8.5.23
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server built:          Sep 28 2017 10:30:11 UTC
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Server number:         8.5.23.0
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Name:               Windows 7
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: OS Version:            6.1
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Architecture:          amd64
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Java Home:             C:\Program Files\Java\jdk1.8.0_112\jre
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Version:           1.8.0_112-b15
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: JVM Vendor:            Oracle Corporation
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_BASE:         D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: CATALINA_HOME:         D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.base=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dcatalina.home=D:\Apps\Eclipse\apache-tomcat-8.5.23
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dwtp.deploy=D:\Eclipse\.metadata\.plugins\org.eclipse.wst.server.core\tmp1\wtpwebapps
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Djava.endorsed.dirs=D:\Apps\Eclipse\apache-tomcat-8.5.23\endorsed
+Nov 13, 2017 8:15:15 PM org.apache.catalina.startup.VersionLoggerListener log
+INFO: Command line argument: -Dfile.encoding=Cp1252
+Nov 13, 2017 8:15:15 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_112\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_112/bin/../jre/lib/amd64;D:\Apps\Anaconda;D:\Apps\Anaconda\Library\mingw-w64\bin;D:\Apps\Anaconda\Library\usr\bin;D:\Apps\Anaconda\Library\bin;D:\Apps\Anaconda\Scripts;C:\Program Files\Java\jdk1.8.0_112\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\doxygen\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\dotnet\;C:\xampp\mysql\bin;C:\Program Files (x86)\Skype\Phone\;C:\TDM-GCC-64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\GtkSharp\2.12\bin;D:\Apps\Anaconda\Library\bin\graphviz;D:\Apps\wkhtmltopdf\bin;C:\Users\asus\AppData\Roaming\npm;D:\Apps\Eclipse\eclipse;;.]
+Nov 13, 2017 8:15:16 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:15:16 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:15:16 PM org.apache.coyote.AbstractProtocol init
+INFO: Initializing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:15:16 PM org.apache.tomcat.util.net.NioSelectorPool getSharedSelector
+INFO: Using a shared selector for servlet write/read
+Nov 13, 2017 8:15:16 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1682 ms
+Nov 13, 2017 8:15:16 PM org.apache.catalina.core.StandardService startInternal
+INFO: Starting service [Catalina]
+Nov 13, 2017 8:15:16 PM org.apache.catalina.core.StandardEngine startInternal
+INFO: Starting Servlet Engine: Apache Tomcat/8.5.23
+Nov 13, 2017 8:15:21 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:15:26 PM org.apache.jasper.servlet.TldScanner scanJars
+INFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+Nov 13, 2017 8:15:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:15:26 PM org.apache.coyote.AbstractProtocol start
+INFO: Starting ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:15:26 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 9656 ms
+{"expiry_time":"2017-11-13 21:15:34","token":"91d2b3e067ad4b06b7c383e161844e74"}
+
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+1
+image path : img/pika1.png
+image path : img/pika1.png
+image path : img/pika1.png
+image path : img/pika1.png
+image path : img/pika1.png
+image path : img/pika1.png
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+1
+pika3
+driverid: 4
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+1
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+91d2b3e067ad4b06b7c383e161844e74
+2017-11-13 21:15:34
+1
+1
+{"expiry_time":"2017-11-13 21:18:13","token":"46936a7a57d64955a25b5d8b1e968600"}
+
+46936a7a57d64955a25b5d8b1e968600
+2017-11-13 21:18:13
+4
+4
+46936a7a57d64955a25b5d8b1e968600
+2017-11-13 21:18:13
+4
+46936a7a57d64955a25b5d8b1e968600
+2017-11-13 21:18:13
+4
+46936a7a57d64955a25b5d8b1e968600
+2017-11-13 21:18:13
+4
+4
+Nov 13, 2017 8:18:48 PM org.apache.catalina.core.StandardServer await
+INFO: A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+Nov 13, 2017 8:18:48 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:18:49 PM org.apache.coyote.AbstractProtocol pause
+INFO: Pausing ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:18:49 PM org.apache.catalina.core.StandardService stopInternal
+INFO: Stopping service [Catalina]
+Nov 13, 2017 8:18:49 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:18:49 PM org.apache.coyote.AbstractProtocol stop
+INFO: Stopping ProtocolHandler ["ajp-nio-8009"]
+Nov 13, 2017 8:18:49 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["http-nio-8080"]
+Nov 13, 2017 8:18:49 PM org.apache.coyote.AbstractProtocol destroy
+INFO: Destroying ProtocolHandler ["ajp-nio-8009"]

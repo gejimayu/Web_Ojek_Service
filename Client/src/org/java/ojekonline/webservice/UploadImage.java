@@ -35,12 +35,16 @@ public class UploadImage extends HttpServlet {
 		String full_name = request.getParameter("name");
 		String phone_number = request.getParameter("phone");
 		String driver = request.getParameter("driver");
+		String imagePath = request.getParameter("filePath");
+		System.out.println("image path : " + imagePath);
 		if (driver != null) {
 			driver = "true";
 		}
 		else {
 			driver = "false";
 		}
+		
+		String pathSave = "";
 		
 		// Create path components to save the file
 	    final String path = "D:\\EclipseApps\\Client\\WebContent\\img";
@@ -49,29 +53,34 @@ public class UploadImage extends HttpServlet {
 	    
 	    final String fileName = getFileName(filePart);
 	    
-	    String pathSave = "img/" +fileName;
-	    
-	    OutputStream out = null;
-	    InputStream filecontent = null;
-	    try {
-	        out = new FileOutputStream(new File(path + File.separator
-	                + fileName));
-	        filecontent = filePart.getInputStream();
+	    if (fileName.length() == 0) {
+	    	pathSave = imagePath;
+	    }
+	    else {
+	    	pathSave = "img/" +fileName;
+		    
+		    OutputStream out = null;
+		    InputStream filecontent = null;
+		    try {
+		        out = new FileOutputStream(new File(path + File.separator
+		                + fileName));
+		        filecontent = filePart.getInputStream();
 
-	        int read = 0;
-	        final byte[] bytes = new byte[1024];
+		        int read = 0;
+		        final byte[] bytes = new byte[1024];
 
-	        while ((read = filecontent.read(bytes)) != -1) {
-	            out.write(bytes, 0, read);
-	        }
-	    } catch (FileNotFoundException fne) {
-	    } finally {
-	        if (out != null) {
-	            out.close();
-	        }
-	        if (filecontent != null) {
-	            filecontent.close();
-	        }
+		        while ((read = filecontent.read(bytes)) != -1) {
+		            out.write(bytes, 0, read);
+		        }
+		    } catch (FileNotFoundException fne) {
+		    } finally {
+		        if (out != null) {
+		            out.close();
+		        }
+		        if (filecontent != null) {
+		            filecontent.close();
+		        }
+		    }
 	    }
 		
 		ps.saveProfile(id_user, pathSave, full_name, phone_number, driver);
