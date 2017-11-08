@@ -22,14 +22,18 @@
 
 ## Penjelasan
 
-- Basis data dibagi dua, yaitu ojekaccount dan ojekonline. Database ojekaccount digunakan manajemen account yang diakses identity service, sementara database ojekonline digunakan manajemen data yang tidak berhubungan dengan account
+- **Basis data dari sistem yang dibuat.**
+    Basis data dibagi dua, yaitu ojekaccount dan ojekonline. Database ojekaccount digunakan manajemen account yang diakses identity service, sementara database ojekonline digunakan manajemen data yang tidak berhubungan dengan account
  
     Database ojekaccount terdiri dari tabel accesstoken yang menyimpan data user_id, token, dan expiretime nya, dan tabel userdata yang menyimpan data username dan password.
     
     Database ojekonline terdiri dari tabel user, driver, pref_location, order_data, user_history, driver_history
-- Setiap user yang login atau register mendapatkan token. Jika ada user lain yang mengetahui token tersebut, user tersebut dapat menggunakannya untuk mendapatkan session yang sama.
-- Token digenerate secara random menggunakan library UUID, lalu token tersebut dimasukkan ke database accesstoken. Expire time, yaitu sejam setelah token dibangkitkan, juga dimasukkan ke database. Saat logout atau saat sudah mencapai expire time, token dihapus
-- Kelebihan dari arsitektur ini adalah service tidak hanya bisa digunakan oleh aplikasi ini, tetapi juga dapat digunakan aplikasi lain sesuai keinginan. Kelemahan dari arsitektur ini adalah lebih sulit diimplementasi
+- **Konsep *shared session* dengan menggunakan REST.**
+    Setiap user yang login atau register mendapatkan token. Jika ada user lain yang mengetahui token tersebut, user tersebut dapat menggunakannya untuk mendapatkan session yang sama.
+- **Pembangkitan token dan expire time pada sistem yang dibuat**
+    Token digenerate secara random menggunakan library UUID, lalu token tersebut dimasukkan ke database accesstoken. Expire time, yaitu sejam setelah token dibangkitkan, juga dimasukkan ke database. Saat logout atau saat sudah mencapai expire time, token dihapus
+- **Kelebihan dan kelemahan dari arsitektur aplikasi ini, dibandingkan dengan aplikasi monolitik**
+    Kelebihan dari arsitektur ini adalah service tidak hanya bisa digunakan oleh aplikasi ini, tetapi juga dapat digunakan aplikasi lain sesuai keinginan. Kelemahan dari arsitektur ini adalah lebih sulit diimplementasi
 
 #### Pembagian Tugas
 
