@@ -53,14 +53,14 @@
 		<table id="tableactivity">
 		<tr>
 			<td class="rest_activity"><a href="pickdestination.jsp">ORDER</a></td>
-			<td id="current_activity"><a href="history-penumpang.jsp">HISTORY</a></td>
+			<td id="current_activity"><a href="#">HISTORY</a></td>
 			<td class="rest_activity"><a href="profile.jsp">MY PROFILE</a></td>
 		</tr>
 		</table>
-		<br>
+		<p id="transactionHistory" >TRANSACTION HISTORY</p>
 		<table id="tableactivity">
 		<tr>
-			<td id="current_activity"><a href="history-penumpang.jsp">PREVIOUS ORDER</a></td>
+			<td id="current_activity"><a href="#">PREVIOUS ORDER</a></td>
 			<td class="rest_activity"><a href="history-driver.jsp">DRIVER HISTORY</a></td>
 		</tr>
 		</table>
@@ -114,7 +114,7 @@
 		}
 		else {
 			%>
-			<center>No History</center><%
+			<center>Nothing to display</center><%
 		}	
 	%>
 </body>
