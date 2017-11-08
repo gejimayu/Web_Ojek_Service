@@ -62,7 +62,7 @@
 		}
 		
 		Babi res = new Babi();
-		res = ps.getUserHistory(userid);
+		res = ps.getDriverHistory(userid);
 		String nameuser = ps.getNameUser(userid);
 	%>
 		<div>
@@ -84,13 +84,13 @@
 		<br>
 		<table id="tableactivity">
 		<tr>
-			<td id="current_activity"><a href="history-penumpang.jsp">PREVIOUS ORDER</a></td>
-			<td class="rest_activity"><a href="history-driver.jsp">DRIVER HISTORY</a></td>
+			<td class="rest_activity"><a href="history-penumpang.jsp">PREVIOUS ORDER</a></td>
+			<td id="current_activity"><a href="history-driver.jsp">DRIVER HISTORY</a></td>
 		</tr>
 		</table>
 		<br>
-	<%
-		if (res.getResults().size() != 0){
+		<%
+		if (res != null){
 			Map<String, String> hasil = new HashMap<String, String>();
 			ArrayList<MapElements> temp = new ArrayList<MapElements>();
 			for (MapElementsArray isi : res.getResults()) {
@@ -98,13 +98,13 @@
 				for (MapElements konten : temp) { 
 					hasil.put(konten.getKey(), konten.getValue());
 				} %>
-				<form method="post" action="history-penumpang-hide.jsp">
+				<form method="post" action="history-driver-hide.jsp">
 						<div class="divTabelProfile" >
 							<table class="tabelProfile">
 								<tr>
 									<td class="profilePict" >
 										<div class="containerPict">
-											<img class="pictProfile" src="<%= ps.getPicture(Integer.parseInt(hasil.get("id_driver")))%>">
+											<img class="pictProfile" src="<%= ps.getPicture(Integer.parseInt(hasil.get("id_user")))%>">
 										</div>
 									</td>
 									<td class="profileDll">

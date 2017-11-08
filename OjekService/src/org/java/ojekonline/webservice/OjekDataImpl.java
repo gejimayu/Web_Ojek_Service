@@ -387,21 +387,22 @@ public class OjekDataImpl implements OjekData {
 		ArrayList<Map<String, String>> smth = new ArrayList<Map<String, String>>();
 		try {
 			String query = null;
-			query = "SELECT * FROM driver_history WHERE id_driver = " + Integer.toString(id_driver) + "and hide ='0'";
+			query = "SELECT * FROM driver_history WHERE id_driver = " + Integer.toString(id_driver) + " and hide = 0";
+			System.out.println(query);
 			execute(query, 1);
-			if (rs.next()) {
-				System.out.println(rs.getString("name"));
+			while (rs.next()) {
+				System.out.println(rs.getString("comment"));
 				Map<String, String> temp = new HashMap<String, String>();
-				temp.put("id_history", rs.getString("id_history"));
-				temp.put("id_user", rs.getString("id_user"));
-				temp.put("id_driver", rs.getString("id_driver"));
+				temp.put("id_history", Integer.toString(rs.getInt("id_history")));
+				temp.put("id_user", Integer.toString(rs.getInt("id_user")));
+				temp.put("id_driver", Integer.toString(rs.getInt("id_driver")));
 				temp.put("date_order", rs.getString("date_order"));
-				temp.put("date_order", rs.getString("costumer_name"));
+				temp.put("customer_name", rs.getString("customer_name"));
 				temp.put("origin", rs.getString("origin"));
 				temp.put("destination", rs.getString("destination"));
-				temp.put("rating", rs.getString("rating"));
+				temp.put("rating", Integer.toString(rs.getInt("rating")));
 				temp.put("comment", rs.getString("comment"));
-				temp.put("hide", rs.getString("hide"));
+				temp.put("hide", Integer.toString(rs.getInt("hide")));
 				smth.add(temp);
 			}
 			
@@ -487,5 +488,33 @@ public class OjekDataImpl implements OjekData {
 		} catch (SQLException e) {
 				e.printStackTrace();
 		}
+	}
+	
+	public void Register(String name, String email, String phone_number, String driver_status) {
+		try {
+			String query = ("INSERT INTO user (name, email, phone_number, driver_status) VALUES ('"+name+"','"+email+"','"+phone_number+"','"+driver_status+"')");
+			execute(query, 2);
+			 stmt.close();
+		     conn.close();
+		} catch (SQLException e) {
+				e.printStackTrace();
+		}
+	}
+	
+	public String getPicture(int id_user) {
+		String query = "SELECT prof_pic FROM user WHERE id_user = " + Integer.toString(id_user);
+		execute(query, 1);
+		String result = null;
+
+		try {
+			if (rs.next())
+				result = rs.getString("prof_pic");
+		
+			stmt.close();
+	        conn.close();
+		} catch (SQLException e) {
+		} 
+        
+		return result;
 	}
 }

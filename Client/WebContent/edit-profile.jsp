@@ -57,6 +57,7 @@
 	}
 	Profile profile = new Profile();
 	profile = ps.getProfileInfo(id_user);
+
 	%>
     <div class="container">
         <!-- Header Section -->

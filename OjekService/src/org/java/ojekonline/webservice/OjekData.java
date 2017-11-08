@@ -69,4 +69,7 @@ public interface OjekData {
 	@WebMethod
 	public void insertUser(String name, String username, String prof_pic, String email, String phone_number,
 			String driver_status);
+	
+	@WebMethod
+	public String getPicture(int id_user);
 }
