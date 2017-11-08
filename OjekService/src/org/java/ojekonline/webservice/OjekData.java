@@ -14,6 +14,10 @@ public interface OjekData {
 	@WebMethod
 	public int validateToken(String token, String expiry_time);
 	
+	
+	@WebMethod
+	public Babi getRatingDetail(int id_user);
+	
 	@WebMethod
 	public Babi findDriver(int id_user, String pick, String dest);
 	
